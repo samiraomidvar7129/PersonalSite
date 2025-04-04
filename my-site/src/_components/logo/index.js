@@ -4,7 +4,7 @@ const Logo=()=>{
     return(
 <div>
     <Image
-             priority={true}
+             loading='lazy'
              src="/imgs/logo/logo.png"
              alt="logo-samiraomidvar"
              width={100}
