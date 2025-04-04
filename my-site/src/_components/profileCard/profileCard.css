@@ -1,0 +1,27 @@
+
+.profileCard{
+    border-radius: 6px;
+    background-color: rgb(180, 151, 76);
+    margin-right: 20px;
+  }
+  
+  .profileCard-button__item{
+    /* border: 1px solid  rgb(180, 151, 76) ; */
+    border-radius: 50px;
+    background-color: #ffff;
+  }
+  .profileCard-button__item a {
+    color:rgb(180, 151, 76) ;
+  }
+  .profileCard-title__owner-skills{
+    font-size: 13px;
+    line-height: 28px;
+  }
+.profileCard-item__img {
+    display: block;
+    object-fit: cover;
+    border-radius: 50%; 
+    position: relative; 
+    z-index: 1; 
+}
+

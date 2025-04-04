@@ -1,0 +1,26 @@
+
+.contact-wrapper__inner--mute-txt,.contact-wrapper__inner--mute-email,.contact-wrapper__inner--mute-address{
+    font-size: 13px;
+  }
+  .cotactForm-wrapper__inner--form-item__input,.cotactForm-wrapper__inner--form-item__textarea {
+    border: 1px solid blue;
+    padding-left: 20px;
+  }
+  .cotactForm-wrapper__inner--form-item__textarea {
+    resize: none;
+  }
+  .cotactForm-wrapper__inner--form-item__input::placeholder{
+    font-size: 12px;
+  }
+  .cotactForm-wrapper__inner--form-item__textarea::placeholder{
+  font-size: 14px;
+  padding-left: 10px;
+  }
+  .cotactForm-wrapper__inner--form-item_btn button{
+    background-color: blue;
+    font-size: 14px;
+  }
+  .cotactForm-wrapper__inner--form-item__error{
+    font-size: 12px;
+    color: red;
+  }

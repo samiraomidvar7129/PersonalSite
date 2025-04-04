@@ -1,0 +1,14 @@
+.services-wrapper__inner--boxes-col{
+    border: 2px solid rgb(180, 151, 76) ;
+  }
+  
+  .services-wrapper__inner--boxes-item__icon span{
+    font-size: 40px;
+    color: rgb(180, 151, 76);
+  }
+  .services-wrapper__inner--boxes-item__title h4{
+    font-size: 16px;
+  }
+  .services-wrapper__inner--boxes-item__txt p{
+  font-size: 14px;
+  }
