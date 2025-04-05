@@ -1,7 +1,7 @@
 import React from "react";
 import "./projects.css";
 
-function ProjectsList() {
+const ProjectsList=()=> {
   return (
     <div className="projectsList-wrapper">
       <div className="conatainer">
@@ -41,5 +41,4 @@ function ProjectsList() {
     </div>
   );
 }
-
 export default ProjectsList;

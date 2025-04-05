@@ -1,9 +1,9 @@
 import React from 'react';
 import MyLinks from '../menu';
 
- function Sidebar() {
+ const Sidebar=()=> {
   return (
-     <aside className='sidebar-parent w-100 h-100'>  
+     <aside className='sise-full'>  
      <MyLinks/>
     </aside>
   )

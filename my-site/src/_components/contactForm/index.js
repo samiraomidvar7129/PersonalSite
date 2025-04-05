@@ -21,9 +21,7 @@ const schema = yup.object().shape({
   message: yup.string().required("The message is obligatory"),
 });
 
-export default function ContactForm() {
-
-  const notify = () => toast("Wow so easy!");
+const ContactForm=() =>{
 
   const {
     register,
@@ -34,36 +32,7 @@ export default function ContactForm() {
     resolver: yupResolver(schema),
   });
 
-  // const onSubmit = async (data) => {
-  //   try {
-  //     const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
-  //       method: "POST",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //       body: JSON.stringify(data),
-  //     });
-
-  //     if (response.ok) {
-  //       toast.success("پیام شما با موفقیت ارسال شد!", {
-  //         position: toast.POSITION.TOP_LEFT, 
-  //         autoClose: 3000,
-  //       });
-  //       // Reset Form
-  //       reset();
-  //     } else {
-  //       toast.error("خطا در ارسال پیام. لطفا دوباره تلاش کنید.", {
-  //         position: toast.POSITION.TOP_LEFT,
-  //         autoClose: 3000,
-  //       });
-  //     }
-  //   } catch (error) {
-  //     toast.error("خطا در برقراری ارتباط. لطفا دوباره تلاش کنید.", {
-  //       position: toast.POSITION.TOP_LEFT,
-  //       autoClose: 3000,
-  //     });
-  //   }
-  // };
+  // Show Alert from Toastify
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -77,15 +46,10 @@ export default function ContactForm() {
                 title: data.fullName,
                 body: data.message,
                 email: data.email,
-                phone: data.phone, // توجه: JSONPlaceholder به صورت پیش‌فرض فیلد شماره تماس را نخواهد داشت
-                userId: 1, // شبیه‌سازی یک userId
+                phone: data.phone, 
+                userId: 1, 
             }),
         });
-
-        // toast.success("پیام شما با موفقیت ارسال شد!", {
-        //   position: toast.POSITION.TOP_LEFT,
-        //   autoClose: 3000,
-
         if (response.ok) {
          toast.success("gfgfgf",{
           position:"top-left",
@@ -158,3 +122,4 @@ export default function ContactForm() {
     </div>
   );
 }
+export default ContactForm;

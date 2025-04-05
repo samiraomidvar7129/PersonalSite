@@ -4,7 +4,7 @@ import Link from "next/link";
 import './profileCard.css';
 import Networks from "../network";
 
-export default function ProfileCard() {
+const ProfileCard=()=> {
   return (
     <div className="profileCard  p-3 w-100 h-auto d-flex flex-column justify-content-center align-items-center text-center  d-none d-md-block">
     <div className="profileCard-item w-75 h-50 m-auto mt-2">
@@ -36,3 +36,4 @@ export default function ProfileCard() {
     </div>
   );
 }
+export default ProfileCard;

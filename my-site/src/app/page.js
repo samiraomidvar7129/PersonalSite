@@ -1,7 +1,7 @@
 import React from 'react';
 import '../app/globals.css';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+import {motion} from 'framer-motion';
 
 export default function Home() {
   return (

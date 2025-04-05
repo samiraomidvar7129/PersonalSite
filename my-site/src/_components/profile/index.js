@@ -1,9 +1,10 @@
 import React from 'react';
 import ProfileCard from '../profileCard';
 
-export default function Profile() {
+const Profile=()=> {
   return (
     <div className='flex justify-center items-center h-full'>
       <ProfileCard/>
     </div>
-  )}
+  )}; 
+  export default Profile;
