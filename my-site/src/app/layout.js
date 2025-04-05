@@ -1,3 +1,4 @@
+// import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
 import { yekan,inter } from "@/config/font";
 import Sidebar from "@/_components/sidebar";

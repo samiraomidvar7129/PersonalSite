@@ -6,20 +6,17 @@ const ContactComp=()=>{
         <motion.div initial={{ opacity: 0 }} transition= { {duration: 1} } animate={{ opacity: 1 } } >
         <div className=" py-5 flex flex-col justify-center items-start">
           <div className=" px-5 ">
-            <div className=" mt-5">
-              <h2>Contact Me</h2>
-            </div>
-            <div className=" mt-5">
+            <div className=" mt5">
               <h6>Contact Info</h6>
             </div>
-            <div className="mt-4">
+            <div className="my-[10px]">
               <p >
               I would like to chat. why donot you call me  </p>
             </div>
-            <div >
-              <p className="fw-bold">09339610841 somdr0889@gmail.com</p>
+            <div  className='my-[10px'>
+              <p className="fw-bold">09339610841 -- somdr0889@gmail.com</p>
             </div>
-            <div>
+            <div className='my-[10px]'>
               <p>Razavi Khorasan, Mashhad, 81 Resalat St</p>
             </div>
             <div />

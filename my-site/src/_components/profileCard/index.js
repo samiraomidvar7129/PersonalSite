@@ -9,7 +9,7 @@ export default function ProfileCard() {
     <div className="profileCard  p-3 w-100 h-auto d-flex flex-column justify-content-center align-items-center text-center  d-none d-md-block">
     <div className="profileCard-item w-75 h-50 m-auto mt-2">
     <Image
-        className="profileCard-item__img m-auto"
+        className="profileCard-item__img m-auto w-[100px] h-[100px]"
         priority={true}
         src="/imgs/omidvar.webp"
         alt="WebSite Owner"
