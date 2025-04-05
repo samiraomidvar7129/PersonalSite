@@ -7,14 +7,11 @@ const AboutComp=()=>{
         <motion.div initial={{ opacity: 0 }} transition= { {duration: 1} } animate={{ opacity: 1 } } >
         <div className="  py-5 flex flex-col justify-center items-start">
             <div className="px-5 ">
-            <div className=" mt-5">
-                <h2>About Me</h2>
-              </div>
               <div className="mt-5">
-                <h6>Who I Am</h6>
+                <h6 className='font-bold'>Who I Am</h6>
               </div>
               <div  className=" mt-4">
-                <p >
+                <p className="text-sm leading-[32px] ">
                   Praesent ut tortor consectetur, semper sapien non, lacinia augue.
                   Aenean arcu libe ro, facilisis et nisi non, tempus faucibus tortor.
                   Mauris vel nulla aliquam, pell entesque enim ac, faucibus tortor.

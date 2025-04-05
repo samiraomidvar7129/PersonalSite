@@ -3,9 +3,9 @@ import ProgressBar from "../progress";
 
 const Skils=()=> {
   return (
-    <div>
-     <div className="mt-3 flex w-full ">
-      <div className="col-sm-12 col-lg-6 w-100">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+     <div className="mt-5 flex w-full ">
+      <div className="pl-3 w-100">
         <div className="col-3">
           <div className="skils-wrapper__title">
             <span>Tailwind</span>
@@ -17,7 +17,7 @@ const Skils=()=> {
           </div>
        </div>
         </div>
-        <div className="col-sm-12 col-lg-6 w-100">
+        <div className="pl-3 w-100">
         <div className="col-3">
           <div className="skils-wrapper__title">
             <span>Bootstrap</span>
@@ -30,8 +30,8 @@ const Skils=()=> {
        </div>
         </div>
       </div>
-      <div className="mt-3 flex w-full ">
-      <div className="col-sm-12 col-lg-6 w-100">
+      <div className="mt-5 flex w-full ">
+      <div className="pl-3 w-100">
         <div className="col-3">
           <div className="skils-wrapper__title">
             <span>Tailwind</span>
@@ -43,7 +43,7 @@ const Skils=()=> {
           </div>
        </div>
         </div>
-        <div className="col-sm-12 col-lg-6 w-100">
+        <div className="pl-3 w-100">
         <div className="col-3">
           <div className="skils-wrapper__title">
             <span>Bootstrap</span>
@@ -56,8 +56,8 @@ const Skils=()=> {
        </div>
         </div>
       </div>
-      <div className="mt-3 flex w-full ">
-      <div className="col-sm-12 col-lg-6 w-100">
+      <div className="mt-5 flex w-full">
+      <div className="pl-3 w-100">
         <div className="col-3">
           <div className="skils-wrapper__title">
             <span>Tailwind</span>
@@ -69,7 +69,7 @@ const Skils=()=> {
           </div>
        </div>
         </div>
-        <div className="col-sm-12 col-lg-6 w-100">
+        <div className="pl-3 w-100">
         <div className="col-3">
           <div className="skils-wrapper__title">
             <span>Bootstrap</span>

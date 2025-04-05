@@ -7,14 +7,11 @@ const ExperienceComp=()=>{
         <div>
      <div className="py-5 flex flex-col justify-center items-start">
        <div className=" px-5 ">
-         <div className=" mt-5">
-           <h2> Experience</h2>
-         </div>
          <div className="mt-5">
-           <h6> Education</h6>
+           <h6 className='font-bold'> Education</h6>
          </div>
-         <div className="mt-4">
-           <p className="text-md leading-[1%]">
+         <div className="mt-8">
+           <p className="text-sm leading-[32px] ">
              Praesent ut tortor consectetur, semper sapien non, lacinia augue.
              Aenean arcu libe ro, facilisis et nisi non, tempus faucibus
              tortor. Mauris vel nulla aliquam, pell entesque enim ac, faucibus
@@ -25,9 +22,9 @@ const ExperienceComp=()=>{
          </div>
          <div />
        </div>
-       <div className="mt-3 ">
+       <div className="mt-3 pl-4">
          <div className="mt-5">
-           <h6> Professional Skills</h6>
+           <h6 className='font-bold'> Professional Skills</h6>
          </div>
          <div className="mt-4">
            <Skils />

@@ -1,16 +1,14 @@
-// import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
-import { yekan,inter } from "@/config/font";
-import Sidebar from "@/_components/sidebar";
-import Profile from "@/_components/profile";
-
+import { yekan, inter } from "@/config/font";
+import Navbar from "@/_components/navbar";
 
 export const metadata = {
   title: "Samira-Omidvar ",
   description:
-  "frontend developer,programming,programmer,FrontEnd,برنامه نویس فرانت  اند ,توسعه دهنده فرانت اند ,توسعه دهنده,برنامه نویس,فرانت اند ",
-    keywords:"samira omidvar,samira,frontend devaloper,developer,programmer,SamiraOmidvar",
-    robots:"index,follow"
+    "frontend developer,programming,programmer,FrontEnd,برنامه نویس فرانت  اند ,توسعه دهنده فرانت اند ,توسعه دهنده,برنامه نویس,فرانت اند ",
+  keywords:
+    "samira omidvar,samira,frontend devaloper,developer,programmer,SamiraOmidvar",
+  robots: "index,follow",
 };
 
 export default function RootLayout({ children }) {
@@ -23,13 +21,14 @@ export default function RootLayout({ children }) {
     },
   };
   return (
-    <html lang="en" className={`${inter.variable} ${yekan.variable} antialiased`}> 
-      <body>
-      <main className="flex justify-center items-center min-h-screen">
-      <div className="w-[10%]"><Sidebar/></div>
-      <main className=" main-wrapper w-[60%] vh-100 ">{children}</main>
-      <div  className="w-[30%]"><Profile/></div>
-      </main>
+    <html
+      lang="en"
+      className={`${inter.variable} ${yekan.variable} antialiased`}>
+      <body className="mx-auto">
+        <header className=" container bg-gray-800 mx-auto text-white">
+          <Navbar />
+        </header>
+        <main className=" container mx-auto py-8 bg-blue-400">{children}</main>
       </body>
     </html>
   );

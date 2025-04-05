@@ -106,7 +106,7 @@ const ContactForm=() =>{
         <div className=" w-full mt-3 flex flex-col">
           <textarea
             rows="8"
-            placeholder="Massage"
+            placeholder="Please describe your business"
             className="block resize-none rounded pl-3 py-3 text-xs outline-yellow-800 border border-1 border-yellow-700 text-xs text-zinc-500 w-full"
             {...register("message")} // Add a register for the textarea
           ></textarea>
