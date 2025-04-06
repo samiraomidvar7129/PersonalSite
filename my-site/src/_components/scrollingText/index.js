@@ -1,12 +1,29 @@
+'use client';
 import React from 'react';
-import './style.css';
 
 const ScrollingText = ({ text }) => {
   return (
-    <div className="overflow-hidden whitespace-nowrap flex items-center">
-      <div className="animate-scroll" style={{ paddingLeft: '100%' }}>
+    <div className="overflow-hidden bg-[#171717] text-white h-16 flex items-center rounded-xl" >
+      <div className="scrolling-text whitespace-nowrap text-sm px-4 text-[#9e9e9e]">
         {text}
       </div>
+
+      <style jsx>{`
+        .scrolling-text {
+          display: inline-block;
+          animation: scrollText 32s linear infinite;
+        }
+
+          @keyframes scrollText {
+          0% {
+            transform: translateX(100%);
+          }
+          100% {
+            transform: translateX(-100%); 
+          }
+        }
+        }
+      `}</style>
     </div>
   );
 };
