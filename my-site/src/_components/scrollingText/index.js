@@ -3,7 +3,7 @@ import React from 'react';
 
 const ScrollingText = ({ text }) => {
   return (
-    <div className="overflow-hidden bg-[#171717] text-white h-16 flex items-center rounded-xl" >
+    <div className="container hidden lg:block overflow-hidden bg-[#171717] text-white h-16 flex justify-center items-center text-center rounded-xl" >
       <div className="scrolling-text whitespace-nowrap text-sm px-4 text-[#9e9e9e]">
         {text}
       </div>

@@ -22,7 +22,7 @@ const Links = () => {
         </button>
       </div>
       <ul
-        className={`fixed top-0 left-0 w-3/4 h-full  bg-[#1c1c1c] transition-transform duration-300 ease-in-out ${
+        className={`fixed  top-0 left-0 w-3/4 h-full  bg-[#1c1c1c] transition-transform duration-300 ease-in-out  ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } z-50 flex flex-col justify-center items-center`}
       >
@@ -34,7 +34,7 @@ const Links = () => {
         </button>
         <li className="mx-8 my-4">
           <Link
-            className={`link text-white hover:text-gray-300 ${
+            className={`link text-[#9e9e9e] hover:text-gray-300 ${
               pathname === "/" ? "active" : ""
             }`}
             href="/"
@@ -45,7 +45,7 @@ const Links = () => {
         </li>
         <li className="mx-8 my-4">
           <Link
-            className={`link text-white hover:text-gray-300 ${
+            className={`link text-[#9e9e9e] hover:text-gray-300 ${
               pathname === "/bio" ? "active" : ""
             }`}
             href="/bio"
@@ -56,18 +56,18 @@ const Links = () => {
         </li>
         <li className="mx-8 my-4">
           <Link
-            className={`link text-white hover:text-gray-300 ${
+            className={`link text-[#9e9e9e] hover:text-gray-300 ${
               pathname === "/projects" ? "active" : ""
             }`}
             href="/projects"
             onClick={toggleMenu}
           >
-            Portfolio
+            Projects
           </Link>
         </li>
         <li className="mx-8 my-4">
           <Link
-            className={`link text-white hover:text-gray-300 ${
+            className={`link text-[#9e9e9e] hover:text-gray-300 ${
               pathname === "/experience" ? "active" : ""
             }`}
             href="/experience"
@@ -78,7 +78,7 @@ const Links = () => {
         </li>
         <li className="mx-8 my-4">
           <Link
-            className={`link text-white hover:text-gray-300 ${
+            className={`link text-[#9e9e9e] hover:text-gray-300 ${
               pathname === "/about" ? "active" : ""
             }`}
             href="/about"
@@ -89,7 +89,7 @@ const Links = () => {
         </li>
         <li className="mx-8 my-4">
           <Link
-            className={`link text-white hover:text-gray-300 ${
+            className={`link text-[#9e9e9e] hover:text-gray-300 ${
               pathname === "/contact" ? "active" : ""
             }`}
             href="/contact"
@@ -101,7 +101,7 @@ const Links = () => {
       </ul>
 
       {/*  only Big Devices */}
-      <ul className="hidden md:flex md:py-8 md:text-center md:flex-wrap md:justify-center">
+      <ul className="hidden md:flex md:py-8 md:text-center md:flex-wrap md:justify-center text-[#9e9e9e] ">
       <Logo/>
         <li className="mx-8">
           <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
@@ -121,7 +121,7 @@ const Links = () => {
             className={`link ${pathname === "/projects" ? "active" : ""}`}
             href="/projects"
           >
-            Portfolio
+            Projects
           </Link>
         </li>
         <li className="mx-8">

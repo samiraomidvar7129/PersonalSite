@@ -1,9 +1,9 @@
 import "react-toastify/dist/ReactToastify.css";
-import Image from "next/image";
 import { useForm } from "react-hook-form";
 import { toast, ToastContainer } from "react-toastify";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { motion } from "framer-motion";
 import { MdOutlineMarkEmailRead } from "react-icons/md";
 import { MdOutlinePhoneIphone } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
@@ -76,13 +76,18 @@ const ContactForm = () => {
   };
 
   return (
-    <div className=" mx-auto mt-8 ml-5 flex flex-wrap justify-center items-center gap-7">
-      <div className="h-full flex flex-col justify-start items-cener ">
+    <motion.div
+      initial={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+      animate={{ opacity: 1 }}
+    >
+<div className="  grid grid-cols-1 lg:grid-cols-2 gap-4 flex justify-center items-center text-center ">
+      <div className="h-full flex flex-col justify-center items-center  ">
         <div>
           <h3 className="text-lg text-white">Contact</h3>
         </div>
-        <div className="flex justify-end items-start gap-2 my-8">
-          <div className="bg-[#1b1b1b] w-[80px] h-full p-2 rounded-xl text-white flex justify-center items-center"><MdOutlineMarkEmailRead className="text-3xl"/></div>
+        <div className="flex items-start gap-2 my-8">
+          <div className="bg-[#1b1b1b] w-[80px] h-20 p-2 rounded-xl text-white flex justify-center items-center text-center"><MdOutlineMarkEmailRead className="text-3xl"/></div>
           <div className="flex flex-col justify-center items-center">
             <div className="text-white text-sm ">Mail</div>
            <div className="pt-2">
@@ -91,8 +96,8 @@ const ContactForm = () => {
            </div>
           </div>
         </div>
-         <div className="flex justify-end items-start gap-2 my-8">
-          <div className="bg-[#1b1b1b] w-[73px] h-full p-2 rounded-xl text-white flex justify-center items-center"><MdOutlinePhoneIphone className="text-3xl"/></div>
+         <div className="flex  items-start gap-2 my-8 ">
+          <div className="bg-[#1b1b1b] w-[73px] h-20 p-2 rounded-xl text-white flex justify-center items-center"><MdOutlinePhoneIphone className="text-3xl"/></div>
           <div className="flex flex-col justify-center items-center">
             <div className="text-white text-sm ">Location</div>
            <div className="pt-2">
@@ -101,8 +106,8 @@ const ContactForm = () => {
            </div>
           </div>
         </div>
-        <div className="flex justify-end items-start gap-2 my-8">
-          <div className="bg-[#1b1b1b] w-[76px] h-full p-2 rounded-xl text-white flex justify-center items-center"><IoLocationOutline className="text-3xl"/></div>
+        <div className="flex  items-start gap-2 my-8">
+          <div className="bg-[#1b1b1b] w-[76px] h-20 p-2 rounded-xl text-white flex justify-center items-center"><IoLocationOutline className="text-3xl"/></div>
           <div className="flex flex-col justify-center items-center">
             <div className="text-white text-sm ">Location</div>
            <div className="pt-2">
@@ -112,9 +117,9 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-      <section className="w-[50%] bg-[#1b1b1b] p-4 rounded-xl ">
+      <section className="flex justify-start items-center bg-[#1b1b1b] w-150 p-8 rounded-xl ">
       <form
-        className=" flex flex-col justify-center items-start "
+        className=" flex flex-col justify-end items-start  w-full"
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="w-full mt-3 flex flex-col">
@@ -169,14 +174,10 @@ const ContactForm = () => {
       </form>
       </section>
       <ToastContainer /> {/* Adding ToastContainer to Show Toasts*/}
-       <Image
-                className="block w-full h-full  mt-8"
-                src="/imgs/earth.png"
-                alt="earth.png"
-                width={100}
-                height={100}
-              />
+       
     </div>
+    </motion.div>
+    
   );
 };
 export default ContactForm;

@@ -1,7 +1,6 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Networks from "../network";
 import { TbArrowRightCircle } from "react-icons/tb";
 
 const ProfileCard = () => {
@@ -30,9 +29,6 @@ const ProfileCard = () => {
           </Link>
           <TbArrowRightCircle className="text-white"/>
         </div>
-      <div className="pt-4">
-        <Networks />
-      </div>
      </div>
     </div>
   );
