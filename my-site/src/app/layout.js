@@ -24,11 +24,11 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${inter.variable} ${yekan.variable} antialiased`}>
-      <body className="mx-auto">
-        <header className=" container bg-gray-800 mx-auto text-white">
+      <body  className="bg-[#0f0f0f] ">
+        <header className=" container mx-auto text-white">
           <Navbar />
         </header>
-        <main className=" container mx-auto py-8 bg-blue-400">{children}</main>
+        <main className=" container mx-auto py-8 ">{children}</main>
       </body>
     </html>
   );

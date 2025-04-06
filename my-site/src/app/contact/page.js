@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
-import ContactComp from "@/_components/contact";
+import ContactForm from "@/_components/contactForm";
 export default function ContactPage() {
   return (
-    <ContactComp/>
+    <ContactForm/>
   );
 }

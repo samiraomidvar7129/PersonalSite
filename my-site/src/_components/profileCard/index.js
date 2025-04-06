@@ -6,7 +6,7 @@ import { TbArrowRightCircle } from "react-icons/tb";
 
 const ProfileCard = () => {
   return (
-    <div className="profileCard  p-3 w-[500px] h-[400px] bg-[#171717] rounded-2xl flex justify-center items-center text-center ">
+    <div className=" p-3  h-[400px] bg-[#171717] rounded-2xl flex flew-wrap justify-center items-center text-center ">
       <div className="w-full p-4">
         <Image
           className="profileCard-item__img m-auto w-[100px] h-[100px]"

@@ -4,14 +4,14 @@ import Skils from '../skills';
 const ExperienceComp=()=>{
     return(
         <motion.div initial={{ opacity: 0 }} transition= { {duration: 1} } animate={{ opacity: 1 } } >
-        <div>
+        <div className='w-[75%] mx-auto'>
      <div className="py-5 flex flex-col justify-center items-start">
        <div className=" px-5 ">
          <div className="mt-5">
-           <h6 className='font-bold'> Education</h6>
+           <h6 className='font-bold text-white'> Education</h6>
          </div>
          <div className="mt-8">
-           <p className="text-sm leading-[32px] ">
+           <p className=" text-white leading-[32px] text-xs">
              Praesent ut tortor consectetur, semper sapien non, lacinia augue.
              Aenean arcu libe ro, facilisis et nisi non, tempus faucibus
              tortor. Mauris vel nulla aliquam, pell entesque enim ac, faucibus
@@ -24,7 +24,7 @@ const ExperienceComp=()=>{
        </div>
        <div className="mt-3 pl-4">
          <div className="mt-5">
-           <h6 className='font-bold'> Professional Skills</h6>
+           <h6 className='font-bold text-white'> Professional Skills</h6>
          </div>
          <div className="mt-4">
            <Skils />

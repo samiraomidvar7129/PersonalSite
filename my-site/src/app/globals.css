@@ -11,18 +11,10 @@
   border: none;
   outline: none !important;
 }
-html, body {
-  height: 100%;
-  margin: 0;
-  overflow: hidden;
+html{
   font-family: var(--font-google-inter);
   user-select: none;
 }
 :lang("en"){
   font-family: var(--font-google-inter);
-}
-
-.main-title {
-  -webkit-text-fill-color: #ffff;
-  -webkit-text-stroke: 2px #000;
 }

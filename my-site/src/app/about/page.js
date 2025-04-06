@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import AboutComp from "@/_components/about";
-export default function AboutPage() {
+const AboutPage=()=> {
   return (
   <AboutComp/>
-  );
-}
+  );}
+export default AboutPage;
