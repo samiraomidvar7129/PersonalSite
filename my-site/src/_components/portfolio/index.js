@@ -6,7 +6,7 @@ const Portfolio = () => {
   return (
     <Link
       href="/experience"
-      className="p-3 cursor-pointer w-[300px] h-[400px] bg-[#171717] rounded-2xl flex flex-col justify-end items-start"
+      className="p-3  mt-8 cursor-pointer w-[300px] h-[400px] bg-[#171717] rounded-2xl flex flex-col justify-end items-start"
     >
       <div className="w-full">
         <Image
