@@ -10,7 +10,6 @@ const Qualification = () => {
     >
       <div className="w-full">
         <Image
-          className="w-full "
           src="/imgs/portfolio.png"
           alt="portfolio-img"
           width={100}

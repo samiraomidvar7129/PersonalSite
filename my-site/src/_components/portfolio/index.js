@@ -10,9 +10,9 @@ const Portfolio = () => {
     >
       <div className="w-full">
         <Image
-          className="w-full "
+          
           src="/imgs/portfolio.png"
-          alt="portfolio-img"
+          alt="portfolio"
           width={100}
           height={100}
           priority={true}

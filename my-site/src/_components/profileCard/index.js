@@ -7,12 +7,12 @@ const ProfileCard = () => {
     <div className=" p-3  h-[400px] bg-[#171717] rounded-2xl flex flew-wrap justify-center items-center text-center ">
       <div className="w-full p-4">
         <Image
-          className="profileCard-item__img m-auto w-[100px] h-[100px]"
+          className="profileCard-item__img m-auto "
           priority={true}
           src="/imgs/omidvar.webp"
-          alt="WebSite Owner"
-          width={300}
-          height={300}
+          alt="SamiraOmidvar"
+          width={200}
+          height={200}
         />
       </div>
      <div className="flex flex-col justify-center items-center text-center ">

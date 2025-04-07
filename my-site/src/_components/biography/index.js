@@ -12,8 +12,8 @@ const Biography = () => {
       <div className="bg-[#171717] p-3 w-[300px] h-[300px] rounded-xl">
         <Image
           className="w-full h-full block bg-cover rounded-xl"
-          src="/imgs/logo/profile.jpg"
-          alt="portfolio-img"
+          src="/imgs/logo/omidvar.webp"
+          alt="SamiraOmidvar"
           width={100}
           height={100}
           priority={true}
