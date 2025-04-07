@@ -1,33 +1,66 @@
-import { motion } from "framer-motion";
+'use client';
+import { motion } from 'framer-motion';
+import { FaBookOpen, FaLaptopCode } from 'react-icons/fa';
+import { PiStudentBold } from 'react-icons/pi';
+import Services from '../services';
+
+const educationSteps = [
+  {
+    title: 'Self-Taught Journey',
+    description:
+      'I started my learning journey on my own, exploring HTML, CSS, JavaScript and frameworks like React through free and paid resources.',
+    icon: <FaBookOpen className="text-blue-400" size={20} />,
+    year: '2022 - Present',
+  },
+  {
+    title: 'Darsman Academy',
+    description:
+      'Currently enrolled in the Darsman Academy frontend course, learning advanced concepts with hands-on real-world projects.',
+    icon: <PiStudentBold className="text-green-400" size={20} />,
+    year: '2024 - Present',
+  },
+];
+
 const ExperienceComp = () => {
   return (
-    <motion.div
+    <motion.section
       initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
       transition={{ duration: 1 }}
-      animate={{ opacity: 1 }}
+      className="bg-[#1b1b1b] py-20 px-4"
     >
-      <div className="w-[75%] mx-auto">
-        <div className="py-5 flex flex-col justify-center items-start">
-          <div className=" px-5 ">
-            <div className="mt-5">
-              <h6 className="font-bold text-white"> Education</h6>
-            </div>
-            <div className="mt-8">
-              <p className=" text-white leading-[32px] text-xs">
-                Throughout my career and learning in the field of front-end
-                development, I have implemented various projects with different
-                goals and at different scales. These projects not only
-                strengthened my technical skills, but also gave me a deeper
-                understanding of the actual development of functional products
-                for end users.
-              </p>
-            </div>
-            <div />
-          </div>
-          
+      <div className="max-w-4xl mx-auto">
+        <h2 className="text-white text-3xl font-bold mb-12 text-center flex items-center justify-center gap-2">
+          <FaLaptopCode className="text-blue-300" /> My Learning Path
+        </h2>
+
+        <div className="relative border-l-4 border-blue-500 pl-6 space-y-10">
+          {educationSteps.map((step, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, x: -50 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.2 }}
+              className="relative"
+            >
+              <div className="absolute -left-8 top-1 bg-slate-800 p-3 rounded-full shadow-md border border-blue-500">
+                {step.icon}
+              </div>
+
+              <div className="bg-[#1b1b1b] rounded-xl shadow-lg p-6 md:p-8 border border-slate-700">
+                <h3 className="text-white text-lg font-semibold mb-1">{step.title}</h3>
+                <p className="text-gray-400 text-sm">{step.description}</p>
+                <span className="text-xs text-gray-500 mt-2 block">{step.year}</span>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </div>
-    </motion.div>
+      <Services/>
+    </motion.section>
   );
 };
+
 export default ExperienceComp;

@@ -1,30 +1,32 @@
-import Image from "next/image";
 import Link from "next/link";
 import { TbArrowRightCircle } from "react-icons/tb";
+import { FcBusinesswoman } from "react-icons/fc";
 
 const Qualification = () => {
   return (
     <Link
       href="/about"
-      className="p-3 mt-8 cursor-pointer w-[300px] h-[400px] bg-[#171717] rounded-2xl flex flex-col justify-end items-start"
+      className="p-4 mt-8 w-full max-w-[300px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-auto bg-[#171717] rounded-2xl flex flex-col justify-end items-start shadow-md transition-all hover:shadow-lg"
     >
-      <div className="w-full">
-        <Image
-          src="/imgs/portfolio.png"
-          alt="portfolio-img"
-          width={100}
-          height={100}
-          priority={true}
+      <div className="w-full h-[200px] flex justify-center items-center">
+        <FcBusinesswoman
+          aria-hidden="true"
+          className="text-[80px] sm:text-[90px] md:text-[100px]"
         />
       </div>
-      <div >
-        <h6 className="text-sm text-zinc-400 py-2">ABOUT ME</h6>
+
+      <div className="w-full mt-4">
+        <h6 className="text-sm text-zinc-400 mb-2">ABOUT ME</h6>
         <div className="w-full flex justify-between items-center">
-          <h2 className="text-xl text-white py-2 ">Qualification</h2>
-          <TbArrowRightCircle className="text-white text-4xl ml-8" />
+          <h2 className="text-lg sm:text-xl text-white">Qualification</h2>
+          <TbArrowRightCircle
+            aria-hidden="true"
+            className="text-white text-3xl sm:text-4xl ml-4"
+          />
         </div>
       </div>
     </Link>
   );
 };
+
 export default Qualification;

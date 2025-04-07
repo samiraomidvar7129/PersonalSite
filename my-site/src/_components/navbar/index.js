@@ -15,22 +15,27 @@ const Links = () => {
 
   return (
     <nav className="relative">
+      {/* Mobile Navbar */}
       <div className="flex justify-between items-center py-4 px-6 md:hidden">
-        <div className="text-xl font-bold ">$.Omidvar</div>
-        <button onClick={toggleMenu} className="text-white focus:outline-none cursor-pointer">
-          <FaBars size={24} />
+        <Logo />
+        <button
+          onClick={toggleMenu}
+          className="text-white focus:outline-none cursor-pointer"
+        >
+          <FaBars aria-hidden="true" size={24} />
         </button>
       </div>
+      {/* Mobile Menu */}
       <ul
-        className={`fixed  top-0 left-0 w-3/4 h-full  bg-[#1c1c1c] transition-transform duration-300 ease-in-out  ${
+        className={`fixed top-0 left-0 w-3/4 h-full bg-[#1c1c1c] transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } z-50 flex flex-col justify-center items-center`}
       >
         <button
           onClick={toggleMenu}
-          className="absolute  bg-[#1a1a1a] p-2 top-4 right-4 text-white cursor-pointer"
+          className="absolute bg-[#1a1a1a] p-2 top-4 right-4 text-white cursor-pointer"
         >
-          <FaTimes size={24} />
+          <FaTimes aria-hidden="true" size={24} />
         </button>
         <li className="mx-8 my-4">
           <Link
@@ -99,12 +104,14 @@ const Links = () => {
           </Link>
         </li>
       </ul>
-
-      {/*  only Big Devices */}
-      <ul className="hidden md:flex md:py-8 md:text-center md:flex-wrap md:justify-center text-[#9e9e9e] ">
-      <Logo/>
+      {/* Desktop Navbar */}
+      <ul className="hidden md:flex md:py-8 md:text-center md:flex-wrap md:justify-center md:items-center text-[#9e9e9e]">
+        <Logo />
         <li className="mx-8">
-          <Link className={`link ${pathname === "/" ? "active" : ""}`} href="/">
+          <Link
+            className={`link ${pathname === "/" ? "active" : ""}`}
+            href="/"
+          >
             Home
           </Link>
         </li>

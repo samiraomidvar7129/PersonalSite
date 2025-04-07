@@ -18,8 +18,6 @@ export default function Home() {
       <Portfolio  />
       <Qualification/>
       <SkillsText /> 
-      <Portfolio/>
-      <Qualification/>
       <Profile/>
     </section>
   </motion.div>
