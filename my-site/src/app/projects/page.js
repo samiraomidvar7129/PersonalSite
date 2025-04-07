@@ -3,46 +3,47 @@ import React from "react";
 import { useEffect,useState } from "react";
 import '../globals.css';
 import { motion } from "framer-motion";
+import Projects from "@/_components/projects";
 
 
 const  ProjectsPage= () => {
-    const [repos, setRepos] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    // const [repos, setRepos] = useState([]);
+    // const [loading, setLoading] = useState(true);
+    // const [error, setError] = useState(null);
 
-    const fetchRepos = async () => {
-        try {
-            const response = await fetch('/api/fetchProjects'); // به API خودتان درخواست بزنید
-            if (!response.ok) {
-                throw new Error('پاسخ شبکه خوب نبود');
-            }
-            const data = await response.json();
-            setRepos(data);
-        } catch (error) {
-            setError(error);
-            console.error('Error fetching projects:', error);
-        } finally {
-            setLoading(false);
-        }
-    };
+    // const fetchRepos = async () => {
+    //     try {
+    //         const response = await fetch('/api/fetchProjects'); // به API خودتان درخواست بزنید
+    //         if (!response.ok) {
+    //             throw new Error('پاسخ شبکه خوب نبود');
+    //         }
+    //         const data = await response.json();
+    //         setRepos(data);
+    //     } catch (error) {
+    //         setError(error);
+    //         console.error('Error fetching projects:', error);
+    //     } finally {
+    //         setLoading(false);
+    //     }
+    // };
 
-    useEffect(() => {
-        fetchRepos()
-    }, []);
+    // useEffect(() => {
+    //     fetchRepos()
+    // }, []);
 
-    if (loading) {
-        return <div>Loading...</div>;
-    }
+    // if (loading) {
+    //     return <div>Loading...</div>;
+    // }
 
-    if (error) {
-        return <div>Error fetching repos: {error.message}</div>;
-    }
+    // if (error) {
+    //     return <div>Error fetching repos: {error.message}</div>;
+    // }
 
 
 
     return (
       <motion.div initial={{ opacity: 0 }} transition= { {duration: 1} } animate={{ opacity: 1 } } >
-      <div className=" projects-wrapper py-5 d-flex flex-column justify-content-center align-items-start">
+      {/* <div className=" projects-wrapper py-5 d-flex flex-column justify-content-center align-items-start">
           <div className="projects-wrapper__inner px-5 ">
           <div className="projects-wrapper__inner--title mt-5">
               <h2> Portfolio</h2>
@@ -78,7 +79,8 @@ const  ProjectsPage= () => {
           </div>
             </section>
         </div>
-        </div>
+        </div> */}
+        <Projects/>
         </motion.div>
       
     );

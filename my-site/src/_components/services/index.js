@@ -1,4 +1,3 @@
-import React from "react";
 import { VscFileCode } from "react-icons/vsc";
 import { MdDeveloperMode } from "react-icons/md";
 import { VscDiffSingle } from "react-icons/vsc";

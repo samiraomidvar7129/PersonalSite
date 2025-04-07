@@ -1,4 +1,3 @@
-import React from 'react';
 import ScrollingText from '../scrollingText';
 
 const SkillsText = () => {

@@ -16,6 +16,7 @@ const Biography = () => {
           alt="portfolio-img"
           width={100}
           height={100}
+          priority={true}
         />
       </div>
       <div className="flex flex-col justify-start items-center ">

@@ -1,4 +1,3 @@
-import React from "react";
 import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io5";
 import { RxLinkedinLogo } from "react-icons/rx";
