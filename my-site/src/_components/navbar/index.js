@@ -1,163 +1,84 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../logo";
 
-const Links = () => {
-  const pathname = usePathname();
+const Navbar=()=> {
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const toggleMenu = () => setIsOpen(!isOpen);
+
+// Change Route / Close Menu
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/bio", label: "Bio" },
+    { href: "/projects", label: "Projects" },
+    { href: "/experience", label: "Experience" },
+    { href: "/about", label: "About" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
     <nav className="relative">
       {/* Mobile Navbar */}
-      <div className="flex justify-between items-center py-4 px-6 md:hidden">
+      <div className="flex justify-between items-center py-4 px-6 lg:hidden">
         <Logo />
-        <button
-          onClick={toggleMenu}
-          className="text-white focus:outline-none cursor-pointer"
-        >
-          <FaBars aria-hidden="true" size={24} />
+        <button onClick={toggleMenu} className="text-white">
+          <FaBars size={24} />
         </button>
       </div>
+
       {/* Mobile Menu */}
       <ul
-        className={`fixed top-0 left-0 w-3/4 h-full bg-[#1c1c1c] transition-transform duration-300 ease-in-out ${
+        className={`fixed top-0 left-0 w-3/4 max-w-sm h-full bg-[#1c1c1c] transition-transform duration-300 ease-in-out z-50 flex flex-col justify-center items-center lg:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } z-50 flex flex-col justify-center items-center`}
+        }`}
       >
         <button
           onClick={toggleMenu}
-          className="absolute bg-[#1a1a1a] p-2 top-4 right-4 text-white cursor-pointer"
+          className="absolute top-4 right-4 bg-[#1a1a1a] p-2 text-white"
         >
-          <FaTimes aria-hidden="true" size={24} />
+          <FaTimes size={24} />
         </button>
-        <li className="mx-8 my-4">
-          <Link
-            className={`link text-[#9e9e9e] hover:text-gray-300 ${
-              pathname === "/" ? "active" : ""
-            }`}
-            href="/"
-            onClick={toggleMenu}
-          >
-            Home
-          </Link>
-        </li>
-        <li className="mx-8 my-4">
-          <Link
-            className={`link text-[#9e9e9e] hover:text-gray-300 ${
-              pathname === "/bio" ? "active" : ""
-            }`}
-            href="/bio"
-            onClick={toggleMenu}
-          >
-            Bio
-          </Link>
-        </li>
-        <li className="mx-8 my-4">
-          <Link
-            className={`link text-[#9e9e9e] hover:text-gray-300 ${
-              pathname === "/projects" ? "active" : ""
-            }`}
-            href="/projects"
-            onClick={toggleMenu}
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="mx-8 my-4">
-          <Link
-            className={`link text-[#9e9e9e] hover:text-gray-300 ${
-              pathname === "/experience" ? "active" : ""
-            }`}
-            href="/experience"
-            onClick={toggleMenu}
-          >
-            Experience
-          </Link>
-        </li>
-        <li className="mx-8 my-4">
-          <Link
-            className={`link text-[#9e9e9e] hover:text-gray-300 ${
-              pathname === "/about" ? "active" : ""
-            }`}
-            href="/about"
-            onClick={toggleMenu}
-          >
-            About
-          </Link>
-        </li>
-        <li className="mx-8 my-4">
-          <Link
-            className={`link text-[#9e9e9e] hover:text-gray-300 ${
-              pathname === "/contact" ? "active" : ""
-            }`}
-            href="/contact"
-            onClick={toggleMenu}
-          >
-            Contact
-          </Link>
-        </li>
+
+        {navLinks.map((link) => (
+          <li key={link.href} className="my-4">
+            <Link
+              href={link.href}
+              className={`text-[#9e9e9e] hover:text-gray-300 ${
+                pathname === link.href ? "text-white font-semibold" : ""
+              }`}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
+
       {/* Desktop Navbar */}
-      <ul className="hidden md:flex md:py-8 md:text-center md:flex-wrap md:justify-center md:items-center text-[#9e9e9e]">
+      <ul className="hidden lg:flex py-6 justify-center items-center text-[#9e9e9e] gap-8">
         <Logo />
-        <li className="mx-8">
-          <Link
-            className={`link ${pathname === "/" ? "active" : ""}`}
-            href="/"
-          >
-            Home
-          </Link>
-        </li>
-        <li className="mx-8">
-          <Link
-            className={`link ${pathname === "/bio" ? "active" : ""}`}
-            href="/bio"
-          >
-            Bio
-          </Link>
-        </li>
-        <li className="mx-8">
-          <Link
-            className={`link ${pathname === "/projects" ? "active" : ""}`}
-            href="/projects"
-          >
-            Projects
-          </Link>
-        </li>
-        <li className="mx-8">
-          <Link
-            className={`link ${pathname === "/experience" ? "active" : ""}`}
-            href="/experience"
-          >
-            Experience
-          </Link>
-        </li>
-        <li className="mx-8">
-          <Link
-            className={`link ${pathname === "/about" ? "active" : ""}`}
-            href="/about"
-          >
-            About
-          </Link>
-        </li>
-        <li className="mx-8">
-          <Link
-            className={`link ${pathname === "/contact" ? "active" : ""}`}
-            href="/contact"
-          >
-            Contact
-          </Link>
-        </li>
+        {navLinks.map((link) => (
+          <li key={link.href}>
+            <Link
+              href={link.href}
+              className={`hover:text-gray-300 ${
+                pathname === link.href ? "text-white font-semibold" : ""
+              }`}
+            >
+              {link.label}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );
-};
-
-export default Links;
+}
+export default Navbar;

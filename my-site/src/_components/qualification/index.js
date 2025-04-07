@@ -1,24 +1,32 @@
+import Image from "next/image";
 import Link from "next/link";
 import { TbArrowRightCircle } from "react-icons/tb";
-import { FcBusinesswoman } from "react-icons/fc";
 
 const Qualification = () => {
   return (
     <Link
       href="/about"
-      className="p-4 mt-8 w-full max-w-[300px] sm:max-w-[320px] md:max-w-[360px] lg:max-w-[400px] h-auto bg-[#171717] rounded-2xl flex flex-col justify-end items-start shadow-md transition-all hover:shadow-lg"
+      className="p-3 mt-8 cursor-pointer w-full max-w-[300px] h-[400px] bg-[#171717] rounded-2xl flex flex-col justify-end items-start
+        sm:max-w-[300px] sm:h-[400px] 
+        md:max-w-[350px] md:h-[420px] 
+        lg:max-w-[400px] lg:h-[450px]"
     >
-      <div className="w-full h-[200px] flex justify-center items-center">
-        <FcBusinesswoman
-          aria-hidden="true"
-          className="text-[80px] sm:text-[90px] md:text-[100px]"
+      <div className="w-full h-full flex justify-center items-center text-center relative">
+        <Image
+          src="/imgs/icons/about.png"
+          alt="Qualification Icon"
+          width={110}
+          height={110}
+          priority={true}
+          className="object-contain"
         />
       </div>
-
-      <div className="w-full mt-4">
-        <h6 className="text-sm text-zinc-400 mb-2">ABOUT ME</h6>
+      <div>
+        <h6 className="text-sm text-zinc-400 py-2">ABOUT ME</h6>
         <div className="w-full flex justify-between items-center">
-          <h2 className="text-lg sm:text-xl text-white">Qualification</h2>
+          <h2 className="text-lg sm:text-xl lg:text-2xl text-white py-2">
+            Qualification
+          </h2>
           <TbArrowRightCircle
             aria-hidden="true"
             className="text-white text-3xl sm:text-4xl ml-4"

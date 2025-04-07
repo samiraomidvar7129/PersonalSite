@@ -1,7 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { TbArrowRightCircle } from "react-icons/tb";
-import { FcAnswers } from "react-icons/fc";
-
 const Portfolio = () => {
   return (
     <Link
@@ -12,10 +11,14 @@ const Portfolio = () => {
         lg:max-w-[400px] lg:h-[450px]"
     >
       <div className="w-full h-full flex justify-center items-center text-center">
-        <FcAnswers
-          aria-hidden="true"
-          className="text-[80px] sm:text-[90px] md:text-[100px] lg:text-[110px]"
-        />
+       <Image
+                 src="/imgs/icons/portfolio.png"
+                 alt="Qualification Icon"
+                 width={110}
+                 height={110}
+                 priority={true}
+                 className="object-contain"
+               />
       </div>
       <div>
         <h6 className="text-sm text-zinc-400 py-2">CV</h6>
