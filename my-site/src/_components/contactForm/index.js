@@ -101,7 +101,7 @@ const ContactForm = () => {
             </div>
             <div>
               <div className="text-white text-sm font-semibold">Location</div>
-              <p className="text-xs text-white mt-2">Iran — Khorasan — Mashhad</p>
+              <p className="text-xs text-white mt-2">Iran — KhorasanRazavi — Mashhad</p>
               <p className="text-xs text-white">BLV — Mofatteh</p>
             </div>
           </div>
