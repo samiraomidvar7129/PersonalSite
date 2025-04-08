@@ -5,9 +5,9 @@ const nextConfig = {
       unoptimized: true,
     },
     i18n: {
-      locales: ['fa', 'en'],  
-      defaultLocale: 'fa',    //  Default language
-      localeDetection: false
+      locales: ['fa', 'en'],  // Suport Languages
+      defaultLocale: 'fa',    //  Default Language
+      localeDetection: false // Prevent the user's browser from automatically selecting a language
     },
   }
   
