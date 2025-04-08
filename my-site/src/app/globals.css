@@ -1,6 +1,4 @@
 @import "tailwindcss";
-
-
 *::after,
 *::before {
   margin: 0;
@@ -12,10 +10,12 @@
   outline: none !important;
 }
 html{
-  font-family: var(--font-google-inter);
+  font-family: var(--font-local-yekan);
   user-select: none;
   font-display: swap;
+  direction: rtl;
 }
 :lang("en"){
   font-family: var(--font-google-inter);
+  direction: ltr;
 }

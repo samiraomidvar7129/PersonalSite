@@ -35,8 +35,9 @@ export default function BioSection() {
             Samira Omidvar
           </h1>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed text-zinc-300">
-            Hey there! 😊 I am a student, diving into the worlds of cybersecurity and machine learning. 
-            I write poems, stories, or tech stuff. Excited to learn and grow with you through the advancement of technology 🚀
+            Hello! 😊 I am Samira, a front-end developer with four years of experience in web programming.
+              Starting as a self-taught learner, I advanced quickly by working on real projects and embracing
+              continuous learning. 🚀
           </p>
         </div>
       </motion.div>
