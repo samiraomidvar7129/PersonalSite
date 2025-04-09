@@ -1,7 +1,7 @@
 import localfont from "next/font/local";
 import {Inter} from "next/font/google"
 
-export const yekan=localfont({
+export  const yekan=localfont({
   src:[
     {
       path:"../../public/fonts/Yekan.ttf",

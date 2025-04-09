@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 
+
 export default function BioSection() {
   return (
     <section className="w-[90%] md:w-[75%] mx-auto mt-8 flex flex-col-reverse lg:flex-row gap-6 justify-center items-center">
