@@ -1,4 +1,5 @@
 "use client";
+// import {useTranslations } from '../../context/TranslationContext'
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -6,10 +7,14 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../logo";
 
 const Navbar=()=> {
+  // const { changeLanguage } = useTranslations();
+
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+
+  
 
 // Change Route / Close Menu
   useEffect(() => {
@@ -64,6 +69,12 @@ const Navbar=()=> {
 
       {/* Desktop Navbar */}
       <ul className="hidden lg:flex py-6 justify-center items-center text-[#9e9e9e] gap-8">
+      <div>
+      <select>
+        <option>Persian</option>
+        <option>English</option>
+      </select>
+    </div>
         <Logo />
         {navLinks.map((link) => (
           <li key={link.href}>

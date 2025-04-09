@@ -11,7 +11,7 @@ export const metadata = {
   robots: "index,follow",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children  }) {
   const variants = {
     hidden: { x: "-100%", opacity: 0 },
     visible: {
@@ -21,8 +21,8 @@ export default function RootLayout({ children }) {
     },
   };
   return (
-    <html
-      lang="en"
+<html
+    lang="en"
       className={`${inter.variable} ${yekan.variable} antialiased`}>
       <body  className="bg-[#0f0f0f] ">
         <header className=" container mx-auto text-white">
