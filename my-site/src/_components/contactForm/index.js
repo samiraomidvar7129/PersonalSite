@@ -108,7 +108,7 @@ const ContactForm = () => {
         </div>
 
         <section className="bg-[#1b1b1b] rounded-xl p-6 sm:p-8">
-          <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit(onSubmit)} action="/api/contact" method="POST" className="flex flex-col gap-4">
             <div>
               <input
                 {...register("fullName")}

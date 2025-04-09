@@ -1,4 +1,6 @@
 import "./globals.css";
+import { LanguageProvider,useLanguage } from "@/context/languageContext";
+import { NextIntlClientProvider } from "next-intl";
 import { yekan, inter } from "@/config/font";
 import Navbar from "@/_components/navbar";
 
