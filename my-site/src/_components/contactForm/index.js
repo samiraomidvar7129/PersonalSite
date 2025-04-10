@@ -70,7 +70,7 @@ const ContactForm = () => {
       className="w-[90%] lg:w-[75%] mx-auto mt-16"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <ul className="flex flex-col justify-center items-center gap-8 text-center" role="contactList">
+        <ul className="flex flex-col justify-center items-center gap-8 text-center" role="list">
           <h3 className="text-3xl font-bold text-white">Contact Me</h3>
 
           <li className="flex items-start gap-4" role="listitem">
@@ -108,27 +108,25 @@ const ContactForm = () => {
         </ul>
 
         <section className="bg-[#1b1b1b] rounded-xl p-6 sm:p-8">
-          <form onSubmit={handleSubmit(onSubmit)} role="contactForm" action="/api/contact" method="POST" className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit(onSubmit)} role="form" action="/api/contact" method="POST" className="flex flex-col gap-4">
             <div>
-              <input
+              <input role="input"
                 {...register("fullName")}
                 placeholder="Your Name"
                 className="bg-[#212121] w-full text-xs text-zinc-300 py-3 px-4 rounded outline-none"
               />
               {errors.fullName && <p className="text-red-600 text-xs mt-1">{errors.fullName.message}</p>}
             </div>
-
             <div>
-              <input
+              <input role="input"
                 {...register("phone")}
                 placeholder="Your Phone Number"
                 className="bg-[#212121] w-full text-xs text-zinc-300 py-3 px-4 rounded outline-none"
               />
               {errors.phone && <p className="text-red-600 text-xs mt-1">{errors.phone.message}</p>}
             </div>
-
             <div>
-              <input
+              <input role="input"
                 {...register("email")}
                 placeholder="Your Email"
                 className="bg-[#212121] w-full text-xs text-zinc-300 py-3 px-4 rounded outline-none"
@@ -136,7 +134,7 @@ const ContactForm = () => {
               {errors.email && <p className="text-red-600 text-xs mt-1">{errors.email.message}</p>}
             </div>
             <div>
-              <textarea
+              <textarea role="textarea"
                 {...register("message")}
                 placeholder="Your Message"
                 rows="5"
@@ -144,7 +142,7 @@ const ContactForm = () => {
               ></textarea>
               {errors.message && <p className="text-red-600 text-xs mt-1">{errors.message.message}</p>}
             </div>
-            <button  aria-label="submitBtn"
+            <button  aria-label="submit"
               type="submit"
               className="bg-white hover:bg-zinc-300 text-zinc-900 text-sm py-3 px-6 rounded mt-2 transition-all duration-300 flex items-center gap-2 justify-center"
             >
