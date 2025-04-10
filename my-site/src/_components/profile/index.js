@@ -30,9 +30,9 @@ const Profile = () => {
       </div>
 
       <div className="w-full mt-4">
-        <h6 className="text-sm text-zinc-400">Stay Connected</h6>
+        <span className="text-sm text-zinc-400">Stay Connected</span>
         <div className="w-full flex justify-between items-center">
-          <h2 className="text-lg md:text-xl text-white py-2">Profiles</h2>
+          <span className="text-lg md:text-xl text-white py-2">Profiles</span>
           <TbArrowRightCircle aria-hidden="true" className="text-white text-3xl md:text-4xl ml-4" />
         </div>
       </div>

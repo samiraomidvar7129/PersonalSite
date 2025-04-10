@@ -1,8 +1,25 @@
+'use client0';
+import { useEffect,useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Networks from "../network";
 
 const AboutComp=()=> {
+
+  const [loading, setLoading] = useState(true);
+  const [expanded, setExpanded] = useState(false);
+
+  useEffect(() => {
+    // شبیه‌سازی تاخیر لود دیتا یا فونت
+    const timer = setTimeout(() => setLoading(false), 1500);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const shortText =
+    "Hello! I am Samira, a front-end developer with four years of experience in web programming.";
+  const fullText =
+    " Starting as a self-taught learner, I advanced quickly by working on real projects and embracing continuous learning. Currently, I work at a leading tourism startup using modern frameworks like React, Next.js, and Tailwind CSS to create smooth, responsive user experiences.";
+
   return (
     <div className="w-[90%] md:w-[80%] lg:w-[75%] mx-auto mt-12">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -45,23 +62,40 @@ const AboutComp=()=> {
             <h2 className="text-xl sm:text-2xl text-white font-semibold mb-4 text-center lg:text-left">
               Who is Samira?
             </h2>
-            <p className="text-sm sm:text-base leading-relaxed text-[#9e9e9e] text-justify">
-              Hello! I am Samira, a front-end developer with four years of experience in web programming.
-              Starting as a self-taught learner, I advanced quickly by working on real projects and embracing
-              continuous learning. Currently, I work at a leading tourism startup using modern frameworks
-              like React, Next.js, and Tailwind CSS to create smooth, responsive user experiences.
-            </p>
+            <div className="p-4">
+      {loading ? (
+        <div className="space-y-2 animate-pulse">
+          <div className="h-4 bg-gray-300 rounded w-3/4" />
+          <div className="h-4 bg-gray-300 rounded w-full" />
+          <div className="h-4 bg-gray-300 rounded w-5/6" />
+        </div>
+      ) : (
+        <>
+          <p className="text-sm sm:text-base leading-relaxed text-[#9e9e9e] text-justify">
+            {shortText}
+            {expanded && fullText}
+          </p>
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-2 text-blue-500 hover:underline text-sm"
+          >
+            {expanded ? " Show less" : " read more"}
+          </button>
+        </>
+      )}
+    </div>
+
           </div>
 
           <div>
             <h2 className="text-xl sm:text-2xl text-white font-semibold mb-4 text-center lg:text-left">
               Why me?
             </h2>
-            <ul className="list-disc pl-6 text-[#9e9e9e] text-sm sm:text-base space-y-2">
-              <li>Modern Web Development with React.js & Next.js</li>
-              <li>Responsive UI/UX for all device types</li>
-              <li>Commitment to continuous learning</li>
-              <li>Problem-solving and performance optimization</li>
+            <ul className="list-disc pl-6 text-[#9e9e9e] text-sm sm:text-base space-y-2" role="list">
+              <li role="listitem">Modern Web Development with React.js & Next.js</li>
+              <li role="listitem">Responsive UI/UX for all device types</li>
+              <li role="listitem">Commitment to continuous learning</li>
+              <li role="listitem">Problem-solving and performance optimization</li>
             </ul>
           </div>
         </motion.div>

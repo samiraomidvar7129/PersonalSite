@@ -1,6 +1,6 @@
 import "./globals.css";
 import Head from "next/head";
-import { yekan, inter } from "@/config/font";
+import {inter } from "@/config/font";
 import Navbar from "@/_components/navbar";
 
 export const metadata = {
@@ -25,7 +25,7 @@ export default  function RootLayout({ children} ) {
   };
   return (
 <html lang="en"
-     className={`${inter.variable} ${yekan.variable} antialiased`}>
+     className={`${inter.variable}`}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
