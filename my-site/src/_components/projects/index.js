@@ -8,7 +8,7 @@ const projects = [
   {
     title: 'Restaurant Tarkhineh',
     description: 'Designed and developed a restaurant website using plain JavaScript and HTML/CSS.',
-    tech: ['JavaScript', 'HTML', 'CSS'],
+    tech: ['JavaScript', 'HTML', 'CSS' , 'SASS'],
     github: 'https://github.com/samiraomidvar7129/Tarkhineh-Restaurant',
     image: '/imgs/projects-img/tarkhineh.png',
   },
