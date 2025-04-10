@@ -1,9 +1,25 @@
 import { motion } from "framer-motion";
-import BioImage from "../bioImage";
+import Image from "next/image";
+
 export default function BioSection() {
   return (
     <section className="w-[90%] md:w-[75%] mx-auto mt-8 flex flex-col lg:flex-row gap-6 justify-center items-center">
-      <BioImage/>
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true }}
+        className="bg-[#171717] p-3 rounded-xl flex justify-center items-center overflow-hidden 
+        w-38 h-38 sm:w-60 sm:h-60 md:w-60 md:h-60 lg:w-60 lg:h-60"      >
+        <Image
+          className="rounded-xl object-cover w-full h-full"
+          src="/imgs/logo/omidvar.webp"
+          alt="Samira Omidvar"
+          width={300}
+          height={300}
+          priority={true}
+        />
+      </motion.div>
       <motion.div
         initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
