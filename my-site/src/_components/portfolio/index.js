@@ -21,9 +21,13 @@ const Portfolio = () => {
                />
       </div>
       <div>
-        <h6 className="text-sm text-zinc-400 py-2">CV</h6>
+      <h6 className="text-sm sm:text-base md:text-lg text-zinc-400 py-2">
+          CV
+        </h6>
         <div className="w-full flex justify-between items-center">
-          <h2 className="text-lg sm:text-xl lg:text-2xl text-white py-2">Portfolio</h2>
+          <h2 className="text-lg sm:text-xl lg:text-2xl xl:text-3xl text-white py-2">
+            Portfolio
+          </h2>
           <TbArrowRightCircle
             aria-hidden="true"
             className="text-white text-3xl sm:text-4xl ml-4"

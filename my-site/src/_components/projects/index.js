@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
@@ -78,24 +79,24 @@ const Projects = () => {
               ))}
             </div>
             <div className="flex items-center gap-4 text-gray-600 mt-2">
-              <a
+              <Link
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-black transition"
                 aria-label={`GitHub repository for ${project.title}`}
               >
-                <FaGithub size={20} />
-              </a>
-              <a
+                <FaGithub size={20} aria-label='githubLink' />
+              </Link>
+              <Link
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-black transition"
                 aria-label={`Live preview for ${project.title}`}
               >
-                <FaExternalLinkAlt size={18} />
-              </a>
+                <FaExternalLinkAlt size={18}  aria-label='linkedinLink'/>
+              </Link>
             </div>
           </motion.div>
         ))}

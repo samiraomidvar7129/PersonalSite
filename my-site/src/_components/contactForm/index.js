@@ -70,10 +70,10 @@ const ContactForm = () => {
       className="w-[90%] lg:w-[75%] mx-auto mt-16"
     >
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <div className="flex flex-col justify-center items-center gap-8 text-center">
+        <ul className="flex flex-col justify-center items-center gap-8 text-center" role="contactList">
           <h3 className="text-3xl font-bold text-white">Contact Me</h3>
 
-          <div className="flex items-start gap-4">
+          <li className="flex items-start gap-4" role="listitem">
             <div className="bg-[#1b1b1b] w-16 h-16 rounded-xl flex justify-center items-center text-white">
               <MdOutlineMarkEmailRead className="text-3xl" />
             </div>
@@ -82,9 +82,9 @@ const ContactForm = () => {
               <p className="text-xs text-white mt-2">yasaminomid9643@gmail.com</p>
               <p className="text-xs text-white">somdr0889@gmail.com</p>
             </div>
-          </div>
+          </li>
 
-          <div className="flex items-start gap-4">
+          <li className="flex items-start gap-4" role="listitem">
             <div className="bg-[#1b1b1b] w-16 h-16 rounded-xl flex justify-center items-center text-white">
               <MdOutlinePhoneIphone className="text-3xl" />
             </div>
@@ -93,9 +93,9 @@ const ContactForm = () => {
               <p className="text-xs text-white mt-2">09339610841 — 09302177630</p>
               <p className="text-xs text-white">0513-274-2034</p>
             </div>
-          </div>
+          </li>
 
-          <div className="flex items-start gap-4">
+          <li className="flex items-start gap-4" role="listitem">
             <div className="bg-[#1b1b1b] w-16 h-16 rounded-xl flex justify-center items-center text-white">
               <IoLocationOutline className="text-3xl" />
             </div>
@@ -104,11 +104,11 @@ const ContactForm = () => {
               <p className="text-xs text-white mt-2">Iran — KhorasanRazavi — Mashhad</p>
               <p className="text-xs text-white">BLV — Mofatteh</p>
             </div>
-          </div>
-        </div>
+          </li>
+        </ul>
 
         <section className="bg-[#1b1b1b] rounded-xl p-6 sm:p-8">
-          <form onSubmit={handleSubmit(onSubmit)} action="/api/contact" method="POST" className="flex flex-col gap-4">
+          <form onSubmit={handleSubmit(onSubmit)} role="contactForm" action="/api/contact" method="POST" className="flex flex-col gap-4">
             <div>
               <input
                 {...register("fullName")}
@@ -144,11 +144,11 @@ const ContactForm = () => {
               ></textarea>
               {errors.message && <p className="text-red-600 text-xs mt-1">{errors.message.message}</p>}
             </div>
-            <button
+            <button  aria-label="submitBtn"
               type="submit"
               className="bg-white hover:bg-zinc-300 text-zinc-900 text-sm py-3 px-6 rounded mt-2 transition-all duration-300 flex items-center gap-2 justify-center"
             >
-              <FiSend className="text-base" /> Send Message
+              <FiSend className="text-base" aria-hidden="true" /> Send Message
             </button>
           </form>
         </section>

@@ -11,14 +11,18 @@ const Profile = () => {
       <div className="w-full gap-4 h-auto py-6 flex justify-center items-center bg-[#1c1c1c] border border-zinc-600 rounded-lg">
         <Link
           href="https://github.com/samiraomidvar7129"
-          title="github.com/samiraomidvar7129"
+          title="www.github.com"
+          aria-label="Github Profile"
           target="_blank"
           className="w-16 h-16 md:w-20 md:h-20 flex justify-center items-center hover:bg-zinc-500 rounded-full border border-zinc-200 transition-all duration-300"
         >
           <IoLogoGithub aria-hidden="true" className="text-3xl md:text-4xl text-white" />
         </Link>
         <Link
-          href="/"
+          href="https://www.linkedin.com/in/samira-omidvar-6038ab234"
+          title="www.linkedin.com"
+          aria-label="Linkedin Profile"
+          target="_blank"
           className="w-16 h-16 md:w-20 md:h-20 flex justify-center items-center hover:bg-zinc-500 rounded-full border border-zinc-200 transition-all duration-300"
         >
           <RxLinkedinLogo aria-hidden="true" className="text-3xl md:text-4xl text-white" />

@@ -30,26 +30,29 @@ const Navbar=()=> {
       {/* Mobile Navbar */}
       <div className="flex justify-between items-center py-4 px-6 lg:hidden">
         <Logo />
-        <button onClick={toggleMenu} className="text-white">
-          <FaBars size={24} />
+        <button onClick={toggleMenu} className="text-white" aria-label="menu">
+          <FaBars size={24} aria-label="menu" />
         </button>
       </div>
 
       {/* Mobile Menu */}
-      <ul
+      <ul 
         className={`fixed top-0 left-0 w-3/4 max-w-sm h-full bg-[#1c1c1c] transition-transform duration-300 ease-in-out z-50 flex flex-col justify-center items-center lg:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
-        <button
-          onClick={toggleMenu}
-          className="absolute top-4 right-4 bg-[#1a1a1a] p-2 text-white"
-        >
-          <FaTimes size={24} />
-        </button>
+         <li className="my-4" role="listitem">
+    <button
+      aria-label="close"
+      onClick={toggleMenu}
+      className="absolute top-4 right-4 bg-[#1a1a1a] p-2 text-white"
+    >
+      <FaTimes size={24} aria-hidden="true" />
+    </button>
+       </li>
 
         {navLinks.map((link) => (
-          <li key={link.href} className="my-4">
+          <li key={link.href} className="my-4" role="listitem">
             <Link
               href={link.href}
               className={`text-[#9e9e9e] hover:text-gray-300 ${
@@ -63,11 +66,10 @@ const Navbar=()=> {
       </ul>
 
       {/* Desktop Navbar */}
-      <ul className="hidden lg:flex py-6 justify-center items-center text-[#9e9e9e] gap-8">
-      
-        <Logo />
+      <ul className="hidden lg:flex py-6 justify-center items-center text-[#9e9e9e] gap-8" >
+        <li role="listitem"><Logo /></li>
         {navLinks.map((link) => (
-          <li key={link.href}>
+          <li key={link.href} role="listitem">
             <Link
               href={link.href}
               className={`hover:text-gray-300 ${

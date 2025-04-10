@@ -1,4 +1,5 @@
 import "./globals.css";
+import Head from "next/head";
 import { yekan, inter } from "@/config/font";
 import Navbar from "@/_components/navbar";
 
@@ -24,8 +25,10 @@ export default  function RootLayout({ children} ) {
   };
   return (
 <html lang="en"
-     className={`${inter.variable} ${yekan.variable} antialiased`}
-    >
+     className={`${inter.variable} ${yekan.variable} antialiased`}>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <body  className="bg-[#0f0f0f] ">
         <header className=" container mx-auto text-white">
           <Navbar />
