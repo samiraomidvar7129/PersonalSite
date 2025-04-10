@@ -11,6 +11,7 @@ const Navbar=()=> {
   const pathname = usePathname();
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  
 // Change Route / Close Menu
   useEffect(() => {
     setIsOpen(false);
