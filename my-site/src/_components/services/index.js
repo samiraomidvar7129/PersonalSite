@@ -8,26 +8,22 @@ const services = [
     icon: <VscFileCode />,
     title: "Web Development",
     description:
-      "Design and development of modern and responsive websites using the latest technologies. ● Create unparalleled user experiences and optimize performance.",
+    "Develop fast and dynamic web applications using modern frameworks such as React, Next.js, providing an optimal and attractive user experience.",
   },
   {
     icon: <GrOptimize />,
     title: "Performance Optimization",
-    description:
-      "Increase speed and improve your website's performance. Optimize images, code, and resources to provide a fast and smooth user experience.",
+    description:"Increased speed and improved application performance to provide a seamless user interface"
   },
   {
     icon: <VscDiffSingle />,
     title: "Single-Page Applications",
-    description:
-      "Develop fast and dynamic web applications using modern frameworks such as React, Next.js, providing an optimal and attractive user experience.",
+    description:"Developing apps and websites with advanced capabilities that need back-end interaction",
   },
   {
     icon: <MdDeveloperMode />,
     title: "Responsive Development",
-    description:
-      "Designing websites that automatically adapt to different screen sizes. Providing a seamless user experience across all devices.",
-  },
+    description:"Create and implement Restful APIs for websites and mobile apps"  },
 ];
 
 const Services = () => {

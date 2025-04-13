@@ -50,12 +50,12 @@
     "aboutMe":"ABOUT ME",
     "qualification":"Qualification",
     "webDevelopment":"Web Development",
-    "webDevelopmentDesc":"Design and development of modern and responsive websites using the latest technologies. ● Create unparalleled user experiences and optimize performance.",
+    "webDevelopmentDesc":"Develop fast and dynamic web applications using modern frameworks such as React, Next.js, providing an optimal and attractive user experience.",
     "performanceOptimization":"Performance Optimization",
-    "performanceDesc":"Increase speed and improve your website's performance. Optimize images, code, and resources to provide a fast and smooth user experience.",
+    "performanceDesc":"Increased speed and improved application performance to provide a seamless user interface",
     "singlePage":"Single-Page Applications",
-    "singlePageDesc":"Develop fast and dynamic web applications using modern frameworks such as React, Next.js, providing an optimal and attractive user experience.",
+    "singlePageDesc":"Developing apps and websites with advanced capabilities that need back-end interaction",
     "responsiveDevelopment":"Responsive Development",
-    "responsiveDesc":"Designing websites that automatically adapt to different screen sizes. Providing a seamless user experience across all devices.",
+    "responsiveDesc":"Create and implement Restful APIs for websites and mobile apps",
     "myServices":"My Services"
   }

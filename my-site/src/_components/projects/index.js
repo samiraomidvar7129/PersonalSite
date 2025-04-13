@@ -64,7 +64,7 @@ const Projects = () => {
               alt={`Project image: ${project.title}`}
               className="rounded-xl mb-4 w-full h-48 object-cover"
               aria-label="projectImage"
-              priority
+              loading='lazy'
             />
             <h3 className="text-xl font-semibold mb-2 text-white">{project.title}</h3>
             <p className="text-gray-400 text-sm mb-3">{project.description}</p>
