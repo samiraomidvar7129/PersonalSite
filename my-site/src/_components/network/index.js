@@ -4,7 +4,6 @@ import { RxLinkedinLogo } from "react-icons/rx";
 import { FaTelegram } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 
-
 const Networks = () => {
   return (
     <div>
@@ -49,7 +48,5 @@ const Networks = () => {
       </li>
     </ul>
   </div>
-  
-  );
-};
+  )};
 export default Networks;

@@ -1,18 +1,21 @@
-import "./globals.css";
+export const dynamic = 'force-dynamic'; // اضافه کردن این خط برای رندر دینامیک
+
+import { metadata } from "./metadata";
 import Head from "next/head";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale , getMessages} from "next-intl/server";
+import "./globals.css";
 import {inter } from "@/config/font";
 import Navbar from "@/_components/navbar";
 
-export const metadata = {
-  title: "Samira-Omidvar ",
-  description:
-    "frontend developer,programming,programmer,FrontEnd,برنامه نویس فرانت  اند ,توسعه دهنده فرانت اند ,توسعه دهنده,برنامه نویس,فرانت اند ",
-  keywords:
-    "samira omidvar,samira,frontend devaloper,developer,programmer,SamiraOmidvar,سمیرا میدوار,فرانت اند دولوپر ",
-  robots: "index,follow",
-};
+export default async function RootLayout({ children} ) {
+  const locale = await getLocale();
+  const messages = await getMessages();
 
-export default  function RootLayout({ children} ) {
+
+  if (locale === null) {
+    return <div>Loading...</div>; // نمایش یک لودر تا زمانی که locale بارگذاری شود.
+  }
 
 
   const variants = {
@@ -24,16 +27,21 @@ export default  function RootLayout({ children} ) {
     },
   };
   return (
-<html lang="en"
-     className={`${inter.variable}`}>
+<html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'} className={`${inter.variable}`}>
       <Head>
+      <title>{metadata.title}</title>
+      <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <body  className="bg-[#0f0f0f] ">
-        <header className=" container mx-auto text-white">
+      <NextIntlClientProvider locale={locale} messages={messages}>
+      <header className=" container mx-auto text-white">
           <Navbar />
         </header>
         <main className=" container mx-auto py-8 ">{children}</main>
+      </NextIntlClientProvider>
+
+      
       </body>
     </html>
 

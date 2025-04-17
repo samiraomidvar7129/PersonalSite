@@ -23,7 +23,5 @@ const ScrollingText = ({ text }) => {
         }
       `}</style>
     </div>
-  );
-};
-
+  )};
 export default ScrollingText;

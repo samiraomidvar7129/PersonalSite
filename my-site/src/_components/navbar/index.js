@@ -2,10 +2,24 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import {  useLocale } from 'next-intl';
+import { useRouter } from 'next/navigation';
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../logo";
 
 const Navbar=()=> {
+  // const translate = useTranslations();
+  const locale = useLocale();
+  const router = useRouter();
+
+ 
+  const locales = ['en', 'fa'];
+
+  const handleLocaleChange = (event) => {
+    const newLocale = event.target.value;
+    document.cookie = `NEXT_LOCALE=${newLocale}; path=/`;
+    window.location.reload(); // چون locale به صورت سروری خونده میشه
+  };
   
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
@@ -68,6 +82,14 @@ const Navbar=()=> {
 
       {/* Desktop Navbar */}
       <ul className="hidden lg:flex py-6 justify-center items-center text-[#9e9e9e] gap-8" >
+        <li role="listitem">
+          <select value={locale} onChange={handleLocaleChange}>
+        {locales.map((l) => (
+          <option key={l} value={l}>
+            {l === 'fa' ? 'فارسی' : 'English'}
+          </option>
+        ))}
+      </select></li>
         <li role="listitem"><Logo /></li>
         {navLinks.map((link) => (
           <li key={link.href} role="listitem">
