@@ -35,7 +35,7 @@ const Profile = () => {
 
       <div className="w-full mt-4">
         <span className="text-sm text-zinc-400">{translate('stayConnected')}</span>
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-between items-center gap-5">
           <span className="text-lg md:text-xl text-white py-2">{translate('profiles')}</span>
           <TbArrowRightCircle aria-hidden="true" className="text-white text-3xl md:text-4xl ml-4" />
         </div>

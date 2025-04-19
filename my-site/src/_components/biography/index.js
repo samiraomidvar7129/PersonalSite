@@ -32,7 +32,7 @@ export default function BioSection() {
         className="flex flex-col justify-start items-center text-center lg:items-start lg:text-left w-full"
       >
         <div className="w-full h-auto mb-4">
-          <span className="text-4xl sm:text-5xl md:text-6xl text-white font-bold">
+          <span className="text-xl sm:text-5xl md:text-6xl text-white font-bold">
             {translate('bio')} 
           </span>
         </div>

@@ -75,9 +75,11 @@ const Projects = () => {
               aria-label="projectImage"
               loading="lazy"/>
             <h3 className="text-xl font-semibold mb-2 text-white">
-              {project.title}
+            {translate("restaurantTarkhineh")}
             </h3>
-            <p className="text-gray-400 text-sm mb-3">{project.description}</p>
+            <p className="text-gray-400 text-sm mb-3">
+              {translate("restaurantDesc")}
+            </p>
             <div className="flex flex-wrap gap-2 text-xs mb-4">
               {project.tech.map((tech, i) => (
                 <span

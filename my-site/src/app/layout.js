@@ -1,4 +1,4 @@
-export const dynamic = 'force-dynamic'; // اضافه کردن این خط برای رندر دینامیک
+export const dynamic = 'force-dynamic'; // Dynumic Render
 
 import { metadata } from "./metadata";
 import Head from "next/head";
@@ -6,6 +6,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale , getMessages} from "next-intl/server";
 import "./globals.css";
 import {inter } from "@/config/font";
+import { yekan } from "@/config/font";
 import Navbar from "@/_components/navbar";
 
 export default async function RootLayout({ children} ) {
@@ -14,7 +15,7 @@ export default async function RootLayout({ children} ) {
 
 
   if (locale === null) {
-    return <div>Loading...</div>; // نمایش یک لودر تا زمانی که locale بارگذاری شود.
+    return <div>Loading...</div>;
   }
 
 
@@ -27,7 +28,7 @@ export default async function RootLayout({ children} ) {
     },
   };
   return (
-<html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'} className={`${inter.variable}`}>
+<html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'}   className={`${inter.variable} ${yekan.variable}`}>
       <Head>
       <title>{metadata.title}</title>
       <meta name="description" content={metadata.description} />

@@ -26,9 +26,9 @@ const Qualification = () => {
         <span className="text-sm sm:text-base md:text-lg text-zinc-400 py-2">
         {translate("aboutMe")}
         </span>
-        <div className="w-full flex justify-between items-center">
+        <div className="w-full flex justify-between items-center gap-5">
           <span className="text-lg sm:text-xl lg:text-xl xl:text-3xl text-white py-2">
-          {translate("qualification")}
+          {translate("learnMore")}
           </span>
           <TbArrowRightCircle
             aria-hidden="true"

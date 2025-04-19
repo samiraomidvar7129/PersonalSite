@@ -10,12 +10,16 @@
   outline: none !important;
 }
 html{
-  font-family: var(--font-local-yekan);
   user-select: none;
-  font-display: swap;
-  direction: rtl;
 }
-:lang("en"){
-  font-family: var(--font-google-inter);
+
+html:lang('fa') {
+  direction: rtl;
+  font-family: var(--font-local-yekan);
+  font-display: swap;
+}
+
+html:lang('en') {
   direction: ltr;
+  font-family: var(--font-google-inter);
 }

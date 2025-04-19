@@ -25,7 +25,7 @@ const ProfileCard = () => {
           {translate("introduce")}
         </h2>
 
-        <div className="py-4 flex items-center gap-2">
+        <div className="py-4 flex items-center gap-5">
           <Link
             href="/path-to-cv.pdf"
             download
