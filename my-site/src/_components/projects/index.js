@@ -16,7 +16,7 @@ const projects = [
   {
     title: "corporateProject",
     description:"CorporateDesc",
-    tech: ["React", "PWA", "Service Workers"],
+    tech: ["React", "PWA", "Redux","Axios", "Formik", "react-leaflet"],
     github: "https://github.com/samiraomidvar7129/Consua-corporate-project",
     image: "/imgs/projects-img/consua.png",
   },

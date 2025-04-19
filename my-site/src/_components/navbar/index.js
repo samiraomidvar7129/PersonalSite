@@ -41,12 +41,14 @@ const Navbar=()=> {
   return (
     <nav className="relative">
       {/* Mobile Navbar */}
-      <div className="flex justify-between items-center py-4 px-6 lg:hidden">
+      <div className="flex justify-between items-center text-[#9e9e9e] py-4 px-6 lg:hidden">
         <button onClick={toggleMenu} className="text-white" aria-label="menu">
           <FaBars size={24} aria-label="menu" />
         </button>
         <Logo />
-          <select value={locale} onChange={handleLocaleChange}>
+          <select className="bg-[#272727] text-white border border-[#444] 
+          rounded-lg px-4 py-2 shadow-md focus:outline-none focus:ring-2
+           focus:ring-blue-500 transition-all duration-200" value={locale} onChange={handleLocaleChange}>
         {locales.map((l) => (
           <option key={l} value={l}>
             {l === 'fa' ? 'فارسی' : 'English'}
@@ -88,7 +90,9 @@ const Navbar=()=> {
       {/* Desktop Navbar */}
       <ul className="hidden lg:flex py-6 justify-center items-center text-[#9e9e9e] gap-8" >
         <li role="listitem">
-          <select value={locale} onChange={handleLocaleChange}>
+          <select className="bg-[#272727] text-white border border-[#444] 
+          rounded-lg px-4 py-2 w-full shadow-md focus:outline-none focus:ring-2
+           focus:ring-blue-500 transition-all duration-200" value={locale} onChange={handleLocaleChange}>
         {locales.map((l) => (
           <option key={l} value={l}>
             {l === 'fa' ? 'فارسی' : 'English'}

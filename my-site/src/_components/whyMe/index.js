@@ -26,7 +26,7 @@ const WhyMe=()=>{
           {translate('Why me')} 
           </h2>
           <ul
-            className="list-disc pl-6 text-[#9e9e9e] text-sm sm:text-base space-y-2"
+            className="list-disc pl-6 text-[#9e9e9e] text-sm sm:text-base pr-6"
             role="list">
             <li role="listitem">
             {translate('Modern Web')} 
