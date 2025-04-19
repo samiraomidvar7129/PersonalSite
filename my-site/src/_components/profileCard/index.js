@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { TbArrowRightCircle } from "react-icons/tb";
+import { FaArrowUpFromBracket } from "react-icons/fa6";
 
 const ProfileCard = () => {
   const translate = useTranslations(); // Using useTranslations to access messages
@@ -33,9 +33,9 @@ const ProfileCard = () => {
           >
             {translate("cvDownload")}
           </Link>
-          <TbArrowRightCircle
+          <FaArrowUpFromBracket
             aria-hidden="true"
-            className="text-white text-xl sm:text-2xl"
+            className="text-white text-xl sm:text-xl"
           />
         </div>
       </div>

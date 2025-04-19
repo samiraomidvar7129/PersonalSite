@@ -42,10 +42,17 @@ const Navbar=()=> {
     <nav className="relative">
       {/* Mobile Navbar */}
       <div className="flex justify-between items-center py-4 px-6 lg:hidden">
-        <Logo />
         <button onClick={toggleMenu} className="text-white" aria-label="menu">
           <FaBars size={24} aria-label="menu" />
         </button>
+        <Logo />
+          <select value={locale} onChange={handleLocaleChange}>
+        {locales.map((l) => (
+          <option key={l} value={l}>
+            {l === 'fa' ? 'فارسی' : 'English'}
+          </option>
+        ))}
+      </select>
       </div>
 
       {/* Mobile Menu */}
@@ -54,8 +61,7 @@ const Navbar=()=> {
            transition-transform duration-300 ease-in-out z-50 flex flex-col
             justify-center items-center lg:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        }`}
-      >
+        }`} >
          <li className="my-4" role="listitem">
     <button
       aria-label="close"

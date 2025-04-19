@@ -1,8 +1,8 @@
 "use client";
 import { useTranslations } from "next-intl";
+import { HiCursorArrowRays } from "react-icons/hi2";
 import Link from "next/link";
 import Image from "next/image";
-import { TbArrowRightCircle } from "react-icons/tb";
 
 const Portfolio = () => {
   const translate = useTranslations(); // Using useTranslations to access messages
@@ -31,10 +31,9 @@ const Portfolio = () => {
           <span className="text-lg sm:text-xl lg:text-xl xl:text-3xl text-white py-2">
             {translate("portfolio")}
           </span>
-          <TbArrowRightCircle
+          <HiCursorArrowRays
             aria-hidden="true"
-            className="text-white text-3xl sm:text-4xl ml-4"
-          />
+            className="text-white text-3xl sm:text-4xl ml-4"/>
         </div>
       </div>
     </Link>

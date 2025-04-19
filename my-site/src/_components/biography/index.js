@@ -28,18 +28,22 @@ export default function BioSection() {
         transition={{ duration: 1 }}
         viewport={{ once: true }}
         className="flex flex-col justify-start items-center text-center lg:items-start lg:text-left w-full">
-        <div className="w-full h-auto mb-4">
+        <div className=" mb-4">
           <h4 className="text-xl sm:text-5xl md:text-4xl text-white font-bold">
             {translate('bio')} 
           </h4>
         </div>
-        <div className="bg-[#171717] rounded-xl p-4 sm:p-6 md:p-8 w-full">
-          <h3 className="text-xl sm:text-2xl md:text-1xl text-white font-semibold py-1">
+        <div className="flex flex-col justify-end items-start  bg-[#171717] rounded-xl p-4 sm:p-6 md:p-8 ">
+        <div className=" mb-4">
+          <h4 className="text-xl sm:text-2xl md:text-1xl text-white font-semibold py-1">
             {translate('name')} 
-          </h3>
-          <p className="text-xs sm:text-sm md:text-lg sm:h-auto leading-relaxed text-zinc-300 text-justify px-2 pt-2 sm:px-4 md:px-6">
+          </h4>
+        </div>
+         <div>
+         <p className="text-xs sm:text-sm md:text-lg sm:h-auto leading-[32px] text-zinc-300 text-justify px-2 pt-2 sm:px-4 md:px-6">
             {translate('webProgramming')} 
           </p>
+         </div>
         </div>
       </motion.div>
     </section>

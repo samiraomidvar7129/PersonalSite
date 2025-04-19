@@ -7,42 +7,37 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
-    title: "Restaurant Tarkhineh",
-    description:
-      "Designed and developed a restaurant website using plain JavaScript and HTML/CSS.",
-    tech: ["JavaScript", "HTML", "CSS", "SASS"],
+    title: "restaurantTarkhineh",
+    description:"restaurantDesc",
+    tech: ["JavaScript", "Ajax", "SASS", "Bootstrap" ,"Swiper.js"],
     github: "https://github.com/samiraomidvar7129/Tarkhineh-Restaurant",
     image: "/imgs/projects-img/tarkhineh.png",
   },
   {
-    title: "Corporate PWA Project",
-    description:
-      "A web application built with React and installable as a PWA for offline access.",
+    title: "corporateProject",
+    description:"CorporateDesc",
     tech: ["React", "PWA", "Service Workers"],
     github: "https://github.com/samiraomidvar7129/Consua-corporate-project",
     image: "/imgs/projects-img/consua.png",
   },
   {
-    title: "Aria Hotel ",
-    description:
-      "A complex hotel management system developed with modular React architecture.",
-    tech: ["React", "SPA", "Routing"],
+    title: "ariaHotel",
+    description:"ariaDesc",
+    tech: ["React", "Redux", "Express.js","Framer-Motion","React-Hook-Form","Yup"],
     github: "https://github.com/samiraomidvar7129/Aria-Hotel",
     image: "/imgs/projects-img/aria-hotel.png",
   },
   {
-    title: "Personal Website",
-    description:
-      "A personal portfolio website built with Next.js, featuring SEO optimization.",
-    tech: ["Next.js", "Tailwind", "SEO"],
+    title: "personalWebsite",
+    description:"personalDesc",
+    tech: ["Next.js", "Next-intl", "Axios", "Tailwind","Framer-Motion","React-Hook-Form","Yup"],
     github: "https://github.com/samiraomidvar7129/PersonalSite",
     image: "/imgs/projects-img/portfolio.png",
   },
   {
-    title: "Doctor Online",
-    description:
-      "An online appointment booking system for doctors using JavaScript and smart forms.",
-    tech: ["JavaScript", "LocalStorage", "Form Validation"],
+    title: "doctorOnline",
+    description:"doctorDesc",
+    tech: ["JavaScript", "LocalStorage", "Axios" , "Swiper.js", "Bootstrap" ,"sweetalert"],
     github: "https://github.com/samiraomidvar7129/Online-Doctor",
     image: "/imgs/projects-img/doctor-img.png",
   },
@@ -75,10 +70,10 @@ const Projects = () => {
               aria-label="projectImage"
               loading="lazy"/>
             <h3 className="text-xl font-semibold mb-2 text-white">
-            {translate("restaurantTarkhineh")}
+            {translate(project.title)} 
             </h3>
-            <p className="text-gray-400 text-sm mb-3">
-              {translate("restaurantDesc")}
+            <p className="text-gray-400 text-sm mb-3 leading-[32px]">
+            {translate(project.description)} 
             </p>
             <div className="flex flex-wrap gap-2 text-xs mb-4">
               {project.tech.map((tech, i) => (

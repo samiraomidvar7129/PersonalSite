@@ -2,7 +2,6 @@ import Link from "next/link";
 import { IoLogoGithub } from "react-icons/io5";
 import { RxLinkedinLogo } from "react-icons/rx";
 import { FaTelegram } from "react-icons/fa6";
-import { FaSquareInstagram } from "react-icons/fa6";
 
 const Networks = () => {
   return (
@@ -35,15 +34,6 @@ const Networks = () => {
          aria-label="Telegram Profile"
          target="_blank">
           <FaTelegram aria-hidden="true" />
-        </Link>
-      </li>
-      <li className="mx-2 p-4 rounded-xl text-center flex justify-center items-center bg-[#242424] hover:bg-white hover:text-zinc-900 transition duration-300" role="listitem">
-        <Link className="px-2 text-2xl sm:text-3xl"
-         href="#"
-         title="www.instagram.com"
-         aria-label="Instagram Profile"
-         target="_blank">
-          <FaSquareInstagram aria-hidden="true" />
         </Link>
       </li>
     </ul>

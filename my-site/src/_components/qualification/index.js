@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
-import { TbArrowRightCircle } from "react-icons/tb";
+import { HiCursorArrowRays } from "react-icons/hi2";
 
 const Qualification = () => {
   const translate = useTranslations(); // Using useTranslations to access messages
@@ -30,7 +30,7 @@ const Qualification = () => {
           <span className="text-lg sm:text-xl lg:text-xl xl:text-3xl text-white py-2">
           {translate("learnMore")}
           </span>
-          <TbArrowRightCircle
+          <HiCursorArrowRays
             aria-hidden="true"
             className="text-white text-3xl sm:text-4xl ml-4"/>
         </div>

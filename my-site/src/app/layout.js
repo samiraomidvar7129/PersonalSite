@@ -34,7 +34,7 @@ export default async function RootLayout({ children} ) {
       <meta name="description" content={metadata.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <body  className="bg-[#0f0f0f] ">
+      <body  className="bg-[#0f0f0f]">
       <NextIntlClientProvider locale={locale} messages={messages}>
       <header className=" container mx-auto text-white">
           <Navbar />

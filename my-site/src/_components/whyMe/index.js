@@ -10,9 +10,9 @@ const WhyMe=()=>{
         whileInView={{ y: 0, opacity: 1 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="flex flex-col gap-8">
-        <div>
-          <h2 className="text-xl sm:text-2xl text-white font-semibold mb-4 text-center lg:text-left">
+        className="flex flex-col   gap-8">
+        <div >
+          <h2 className="text-xl sm:text-2xl text-white font-semibold mb-4  ">
           {translate('how is')} 
           </h2>
           <div className="p-4">
@@ -22,7 +22,7 @@ const WhyMe=()=>{
           </div>
         </div>
         <div>
-          <h2 className="text-xl sm:text-2xl text-white font-semibold mb-4 text-center lg:text-left">
+          <h2 className="text-xl sm:text-2xl text-white font-semibold mb-4 ">
           {translate('Why me')} 
           </h2>
           <ul

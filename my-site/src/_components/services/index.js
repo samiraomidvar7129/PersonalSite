@@ -7,28 +7,23 @@ import { GrOptimize } from "react-icons/gr";
 const services = [
   {
     icon: <VscFileCode />,
-    title: "Web Development",
-    description:
-      "Develop fast and dynamic web applications using modern frameworks such as React, Next.js, providing an optimal and attractive user experience.",
-  },
+    title: "webDevelopment",
+    description:"webDevelopmentDesc"  },
   {
     icon: <GrOptimize />,
-    title: "Performance Optimization",
-    description:
-      "Increased speed and improved application performance to provide a seamless user interface",
-  },
+    title: "performanceOptimization",
+    description:"performanceDesc"
+    },
   {
     icon: <VscDiffSingle />,
-    title: "Single-Page Applications",
-    description:
-      "Developing apps and websites with advanced capabilities that need back-end interaction",
-  },
+    title: "singlePage",
+    description:"singlePageDesc" 
+   },
   {
     icon: <MdDeveloperMode />,
-    title: "Responsive Development",
-    description:
-      "Create and implement Restful APIs for websites and mobile apps",
-  },
+    title: "responsiveDevelopment",
+    description:"responsiveDesc"
+    },
 ];
 
 const Services = () => {
@@ -59,18 +54,16 @@ const Services = () => {
             <motion.div
               whileHover={{ rotate: 360 }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="text-4xl text-slate-600 mb-3"
-            >
+              className="text-4xl text-slate-600 mb-3">
               {service.icon}
             </motion.div>
-
             <h4 className="text-white text-base font-semibold
              mb-2 group-hover:text-slate-500 transition-colors
               duration-300">
-              {translate("webDevelopment")}
+              {translate(service.title)} 
             </h4>
             <p className="text-sm text-zinc-300 leading-relaxed">
-              {translate("webDevelopmentDesc")}
+            {translate(service.description)} 
             </p>
           </motion.div>
         ))}
