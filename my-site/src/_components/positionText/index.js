@@ -28,7 +28,7 @@ const PositionText=()=>{
           {translate('name')} 
           </h1>
           <p className="text-[#9e9e9e] text-sm sm:text-base mt-3 text-center">
-          {translate('position')} 
+          {translate("introduce")}
           </p>
           <div className="mt-4">
             <Networks />

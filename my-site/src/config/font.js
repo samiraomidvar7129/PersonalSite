@@ -17,3 +17,14 @@ export const yekan = localFont({
   variable: '--font-local-yekan',
   display: 'swap',
 })
+
+export const austyke = localFont({
+  src: [
+    {
+      path: '../../public/fonts/austyke.ttf', 
+      style: 'normal',
+    },
+  ],
+  variable: '--font-local-austyke',
+  display: 'swap',
+})

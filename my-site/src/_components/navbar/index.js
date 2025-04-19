@@ -1,24 +1,22 @@
 "use client";
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {  useLocale } from 'next-intl';
-import { useRouter } from 'next/navigation';
 import { FaBars, FaTimes } from "react-icons/fa";
 import Logo from "../logo";
 
 const Navbar=()=> {
-  // const translate = useTranslations();
+  const translate = useTranslations(); // Using useTranslations to access messages
   const locale = useLocale();
-  const router = useRouter();
 
- 
   const locales = ['en', 'fa'];
 
   const handleLocaleChange = (event) => {
     const newLocale = event.target.value;
     document.cookie = `NEXT_LOCALE=${newLocale}; path=/`;
-    window.location.reload(); // چون locale به صورت سروری خونده میشه
+    window.location.reload(); 
   };
   
   const [isOpen, setIsOpen] = useState(false);
@@ -32,12 +30,12 @@ const Navbar=()=> {
   }, [pathname]);
 
   const navLinks = [
-    { href: "/", label: "Home" },
-    { href: "/bio", label: "Bio" },
-    { href: "/projects", label: "Projects" },
-    { href: "/experience", label: "Experience" },
-    { href: "/about", label: "About" },
-    { href: "/contact", label: "Contact" },
+    { href: "/", key: "home" },
+    { href: "/bio", key: "bio" },
+    { href: "/projects", key: "projects" },
+    { href: "/experience", key: "experience" },
+    { href: "/about", key: "about" },
+    { href: "/contact", key: "contact" },
   ];
 
   return (
@@ -52,7 +50,9 @@ const Navbar=()=> {
 
       {/* Mobile Menu */}
       <ul 
-        className={`fixed top-0 left-0 w-3/4 max-w-sm h-full bg-[#1c1c1c] transition-transform duration-300 ease-in-out z-50 flex flex-col justify-center items-center lg:hidden ${
+        className={`fixed top-0 left-0 w-3/4 max-w-sm h-full bg-[#1c1c1c]
+           transition-transform duration-300 ease-in-out z-50 flex flex-col
+            justify-center items-center lg:hidden ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         }`}
       >
@@ -72,10 +72,9 @@ const Navbar=()=> {
               href={link.href}
               className={`text-[#9e9e9e] hover:text-gray-300 ${
                 pathname === link.href ? "text-white font-semibold" : ""
-              }`}
-            >
-              {link.label}
-            </Link>
+              }`} >
+              {translate(link.key)}
+              </Link>
           </li>
         ))}
       </ul>
@@ -97,9 +96,8 @@ const Navbar=()=> {
               href={link.href}
               className={`hover:text-gray-300 ${
                 pathname === link.href ? "text-white font-semibold" : ""
-              }`}
-            >
-              {link.label}
+              }`}>
+              {translate(link.key)}
             </Link>
           </li>
         ))}

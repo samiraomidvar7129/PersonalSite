@@ -23,3 +23,6 @@ html:lang('en') {
   direction: ltr;
   font-family: var(--font-google-inter);
 }
+.logoText{
+  font-family: var(--font-local-austyke);
+}

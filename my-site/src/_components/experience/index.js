@@ -7,21 +7,18 @@ import Services from '../services';
 
 const educationSteps = [
   {
-    title: 'Self-Taught Journey',
-    description:
-      'I started my learning journey on my own, exploring HTML, CSS, JavaScript and frameworks like React through free and paid resources.',
+    title: 'SelfTaughtJourney',
+    description: 'description1',
     icon: <FaBookOpen className="text-blue-400" size={20} />,
-    year: '2022 - Present',
+    year: 'Present',
   },
   {
-    title: 'Darsman Academy',
-    description:
-      'Currently enrolled in the Darsman Academy frontend course, learning advanced concepts with hands-on real-world projects.',
+    title: 'darsmanAcademy',
+    description: 'darsmanDesc',
     icon: <PiStudentBold className="text-green-400" size={20} />,
-    year: '2024 - Present',
+    year: 'Present',
   },
 ];
-
 const ExperienceComp = () => {
   const translate = useTranslations(); // Using useTranslations to access messages
 
@@ -49,9 +46,9 @@ const ExperienceComp = () => {
                 {step.icon}
               </div>
               <div className="bg-[#1b1b1b] rounded-xl shadow-lg p-6 md:p-8 border border-slate-700">
-                <h3 className="text-white text-lg font-semibold mb-1">{translate('SelfTaughtJourney')} </h3>
-                <p className="text-gray-400 text-sm">{translate('description1')} </p>
-                <span className="text-xs text-gray-500 mt-2 block">{translate('Present')}</span>
+                <h3 className="text-white text-lg font-semibold mb-1">{translate(step.title)} </h3>
+                <p className="text-gray-400 text-sm">{translate(step.description)} </p>
+                <span className="text-xs text-gray-500 mt-2 block">{translate(step.year)}</span>
               </div>
             </motion.div>
           ))}

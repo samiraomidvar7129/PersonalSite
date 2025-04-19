@@ -7,7 +7,6 @@ const ContactList=()=>{
 
     return(
         <>
-          
           <ul
           className="flex flex-col justify-center items-center gap-8 text-center"
           role="list">
