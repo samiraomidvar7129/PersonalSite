@@ -11,6 +11,7 @@ const projects = [
     description:"restaurantDesc",
     tech: ["JavaScript", "Ajax", "SASS", "Bootstrap" ,"Swiper.js"],
     github: "https://github.com/samiraomidvar7129/Tarkhineh-Restaurant",
+    demo:"https://tarkhineh.samira-omidvar.ir/",
     image: "/imgs/projects-img/tarkhineh.png",
   },
   {
@@ -18,6 +19,7 @@ const projects = [
     description:"CorporateDesc",
     tech: ["React", "PWA", "Redux","Axios", "Formik", "react-leaflet"],
     github: "https://github.com/samiraomidvar7129/Consua-corporate-project",
+    demo:"https://consua.samira-omidvar.ir/",
     image: "/imgs/projects-img/consua.png",
   },
   {
@@ -32,6 +34,7 @@ const projects = [
     description:"personalDesc",
     tech: ["Next.js", "Next-intl", "Axios", "Tailwind","Framer-Motion","React-Hook-Form","Yup"],
     github: "https://github.com/samiraomidvar7129/PersonalSite",
+    demo:"https://samira-omidvar.ir/",
     image: "/imgs/projects-img/portfolio.png",
   },
   {
@@ -39,6 +42,7 @@ const projects = [
     description:"doctorDesc",
     tech: ["JavaScript", "LocalStorage", "Axios" , "Swiper.js", "Bootstrap" ,"sweetalert"],
     github: "https://github.com/samiraomidvar7129/Online-Doctor",
+    demo:"https://doctoronline.samira-omidvar.ir/",
     image: "/imgs/projects-img/doctor-img.png",
   },
 ];
@@ -94,7 +98,7 @@ const Projects = () => {
                 <FaGithub size={20} aria-label="githubLink" />
               </Link>
               <Link
-                href={project.github}
+                href={project.demo}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-black transition"
