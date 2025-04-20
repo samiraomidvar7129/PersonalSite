@@ -15,19 +15,20 @@ const projects = [
     image: "/imgs/projects-img/tarkhineh.png",
   },
   {
-    title: "corporateProject",
-    description:"CorporateDesc",
-    tech: ["React", "PWA", "Redux","Axios", "Formik", "react-leaflet"],
-    github: "https://github.com/samiraomidvar7129/Consua-corporate-project",
-    demo:"https://consua.samira-omidvar.ir/",
-    image: "/imgs/projects-img/consua.png",
-  },
-  {
     title: "ariaHotel",
     description:"ariaDesc",
     tech: ["React", "Redux", "Express.js","Framer-Motion","React-Hook-Form","Yup"],
     github: "https://github.com/samiraomidvar7129/Aria-Hotel",
+    demo:"https://github.com/samiraomidvar7129/Aria-Hotel",
     image: "/imgs/projects-img/aria-hotel.png",
+  },
+  {
+    title: "corporateProject",
+    description:"CorporateDesc",
+    tech: ["React", "PWA", "Redux","Axios", "Formik", "react-leaflet" ,"Json-Server"],
+    github: "https://github.com/samiraomidvar7129/Consua-corporate-project",
+    demo:"https://consua.samira-omidvar.ir/",
+    image: "/imgs/projects-img/consua.png",
   },
   {
     title: "personalWebsite",
@@ -88,14 +89,14 @@ const Projects = () => {
                 </span>
               ))}
             </div>
-            <div className="flex items-center gap-4 text-gray-600 mt-2">
+            <div className="flex justify-between items-center gap-4 text-gray-600 mt-6">
               <Link
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-black transition"
                 aria-label={`GitHub repository for ${project.title}`}>
-                <FaGithub size={20} aria-label="githubLink" />
+                <FaGithub size={22} className="text-white" aria-label="githubLink" />
               </Link>
               <Link
                 href={project.demo}
@@ -103,7 +104,7 @@ const Projects = () => {
                 rel="noopener noreferrer"
                 className="hover:text-black transition"
                 aria-label={`Live preview for ${project.title}`}>
-                <FaExternalLinkAlt size={18} aria-label="linkedinLink" />
+                <FaExternalLinkAlt className="text-white" title="Live Demo" size={22} aria-label="linkedinLink" />
               </Link>
             </div>
           </motion.div>
@@ -112,5 +113,4 @@ const Projects = () => {
     </section>
   );
 };
-
 export default Projects;
