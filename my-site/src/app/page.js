@@ -13,5 +13,4 @@ export default function Home() {
         <SkillsText />
         <Profile />
       </section>
-    
   )};

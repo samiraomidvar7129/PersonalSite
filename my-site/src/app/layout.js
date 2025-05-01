@@ -13,11 +13,9 @@ export default async function RootLayout({ children} ) {
   const locale = await getLocale();
   const messages = await getMessages();
 
-
   if (locale === null) {
     return <div>Loading...</div>;
   }
-
 
   const variants = {
     hidden: { x: "-100%", opacity: 0 },
@@ -25,10 +23,10 @@ export default async function RootLayout({ children} ) {
       x: "0%",
       opacity: 1,
       transition: { duration: 1 },
-    },
-  };
+    }};
+
   return (
-<html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'}   className={`${inter.variable} ${yekan.variable}`}>
+    <html lang={locale} dir={locale === 'fa' ? 'rtl' : 'ltr'}   className={`${inter.variable} ${yekan.variable}`}>
       <Head>
       <title>{metadata.title}</title>
       <meta name="description" content={metadata.description} />
@@ -41,10 +39,5 @@ export default async function RootLayout({ children} ) {
         </header>
         <main className=" container mx-auto py-8 ">{children}</main>
       </NextIntlClientProvider>
-
-      
       </body>
-    </html>
-
-  );
-}
+    </html>)}
