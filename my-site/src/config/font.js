@@ -10,7 +10,7 @@ export const inter=Inter({
 export const yekan = localFont({
   src: [
     {
-      path: '../../public/fonts/yekan.ttf',
+      path: '/fonts/Yekan.ttf',
       style: 'normal',
     },
   ],
@@ -21,7 +21,7 @@ export const yekan = localFont({
 export const austyke = localFont({
   src: [
     {
-      path: '../../public/fonts/austyke.ttf', 
+      path: '/fonts/Austyke.ttf', 
       style: 'normal',
     },
   ],
