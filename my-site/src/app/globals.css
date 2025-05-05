@@ -1,4 +1,5 @@
 @import "tailwindcss";
+
 *::after,
 *::before {
   margin: 0;
@@ -16,7 +17,6 @@ html{
 html:lang('fa') {
   direction: rtl;
   font-family: var(--font-local-yekan);
-  font-display: swap;
 }
 
 html:lang('en') {
